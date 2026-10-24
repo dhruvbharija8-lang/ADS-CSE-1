@@ -1,0 +1,101 @@
+column,source,source_type,description,analysis_role,missing_pct
+permit_number,SF DBI recorded,text,Permit Number. Permits that start with 'M' are miscellaneous permits for this like street use or address creation.,Identifier or join key; preserve as text,0.0
+permit_type,SF DBI recorded,text,Type of permit (i.e. Permit Application Form number),Context or explanatory attribute,0.0
+permit_type_definition,SF DBI recorded,text,Definition of each permit type,Context or explanatory attribute,0.0
+permit_creation_date,SF DBI recorded,calendar_date,Date that application is created in permit tracking system.,Lifecycle or snapshot field; check availability before predictive use,0.0
+block,SF DBI recorded,text,Block,Identifier or join key; preserve as text,0.0
+lot,SF DBI recorded,text,Lot,Identifier or join key; preserve as text,0.0
+street_number,SF DBI recorded,text,Street Number,Context or explanatory attribute,0.0
+street_number_suffix,SF DBI recorded,text,Street Number Suffix,Context or explanatory attribute,98.7898
+street_name,SF DBI recorded,text,Street Name,Context or explanatory attribute,0.0
+street_suffix,SF DBI recorded,text,Street Suffix,Context or explanatory attribute,1.4623
+unit,SF DBI recorded,text,Unit,Context or explanatory attribute,86.4315
+unit_suffix,SF DBI recorded,text,Unit Suffix,Context or explanatory attribute,98.8015
+description,SF DBI recorded,text,Description of permit scope of work,Context or explanatory attribute,0.064
+primary_priority,SF DBI recorded,text,Indicates the primary priority to be used for SLA,Lifecycle or snapshot field; check availability before predictive use,98.2817
+all_priority_types,SF DBI recorded,text,List all priorities assigned to the permit,Lifecycle or snapshot field; check availability before predictive use,98.2817
+status,SF DBI recorded,text,"Current Status. Note: this column should be in combination with the Approved, Issued, Completed dates.",Lifecycle or snapshot field; check availability before predictive use,0.0
+status_date,SF DBI recorded,calendar_date,Current Status Date,Lifecycle or snapshot field; check availability before predictive use,0.0
+filed_date,SF DBI recorded,calendar_date,Date permit was filed in permit tracking system,Lifecycle or snapshot field; check availability before predictive use,0.0
+issued_date,SF DBI recorded,calendar_date,Date permit was issued (i.e. permit fees paid),Lifecycle or snapshot field; check availability before predictive use,7.4155
+completed_date,SF DBI recorded,calendar_date,Date that completed work was finaled by inspection staff,Lifecycle or snapshot field; check availability before predictive use,35.1014
+first_construction_document_date,SF DBI recorded,calendar_date,"For site permits, this is the date when the addenda marked as the first construction document (usually the first addenda) is issued.",Lifecycle or snapshot field; check availability before predictive use,99.327
+approved_date,SF DBI recorded,calendar_date,Date permit was approved,Lifecycle or snapshot field; check availability before predictive use,10.6258
+structural_notification,SF DBI recorded,text,Structural Notification,Context or explanatory attribute,96.9429
+number_of_existing_stories,SF DBI recorded,text,Number of Existing Stories,Context or explanatory attribute,14.1943
+number_of_proposed_stories,SF DBI recorded,text,Number of Proposed Stories,Context or explanatory attribute,14.555
+voluntary_soft_story_retrofit,SF DBI recorded,text,Voluntary Soft-Story Retrofit,Context or explanatory attribute,99.9987
+fire_only_permit,SF DBI recorded,text,Fire Only Permit - i.e. permits where SFFD is is the only reviewing agency.,Context or explanatory attribute,86.6067
+estimated_cost,SF DBI recorded,text,Estimated project cost,Context or explanatory attribute,8.702
+revised_cost,SF DBI recorded,text,Revised project cost after project review,Lifecycle or snapshot field; check availability before predictive use,1.9355
+existing_use,SF DBI recorded,text,Existing Use,Context or explanatory attribute,11.1411
+existing_units,SF DBI recorded,text,Existing number of units on site,Context or explanatory attribute,25.2604
+proposed_use,SF DBI recorded,text,Proposed use,Context or explanatory attribute,12.1579
+proposed_units,SF DBI recorded,text,Proposed number of units on site (after construction),Context or explanatory attribute,24.7425
+plansets,SF DBI recorded,text,"Number of plan copies/ ""plansets"" submitted with application)",Context or explanatory attribute,8.3296
+tidf_compliance,SF DBI recorded,text,Permit is required to pay the Transit Impact Development Fee. This fee is based on the square footage of commercial space being developed.,Context or explanatory attribute,100.0
+existing_occupancy,SF DBI recorded,text,Existing building occupancy code or codes,Context or explanatory attribute,10.4332
+proposed_occupancy,SF DBI recorded,text,Proposed building occupancy code or codes,Context or explanatory attribute,11.0105
+existing_construction_type,SF DBI recorded,text,Existing Construction Type. See full definitions here: https://sf.gov/information/building-construction-type-definitions,Context or explanatory attribute,14.4587
+existing_construction_type_description,SF DBI recorded,text,Existing Construction Type description. See full definitions here: https://sf.gov/information/building-construction-type-definitions,Context or explanatory attribute,14.4632
+proposed_construction_type,SF DBI recorded,text,Proposed Construction Type. See full definitions here: https://sf.gov/information/building-construction-type-definitions,Context or explanatory attribute,14.7877
+proposed_construction_type_description,SF DBI recorded,text,Proposed Construction Type description. See full definitions here: https://sf.gov/information/building-construction-type-definitions,Context or explanatory attribute,14.7923
+site_permit,SF DBI recorded,text,Site Permit,Context or explanatory attribute,98.4996
+last_permit_activity_date,SF DBI recorded,calendar_date,Date of most recent activity on permit (or associated addenda for site permits) at any routing station.,Lifecycle or snapshot field; check availability before predictive use,0.4473
+application_submission_method,SF DBI recorded,text,"Indicates how the permit application was submitted to DBI, i.e. via DBI's permit web application form, SF.gov form, or in person. (Auto-generated by MIS based on other PTS data fields)",Context or explanatory attribute,0.0
+adu,SF DBI recorded,text,"NOTE - this column was deprecated on 2/1/25, use primary_priority instead.Permit for an accessory dwelling unit (ADU)",Context or explanatory attribute,0.0
+primary_address_flag,SF DBI recorded,text,Indicates whether the address for the permit is the primary address identified by DBI,Context or explanatory attribute,0.0
+supervisor_district,SF DBI recorded,text,Supervisor district the permit falls within,Context or explanatory attribute,0.0478
+neighborhoods_analysis_boundaries,SF DBI recorded,text,Analysis neighborhood the permit falls within,Context or explanatory attribute,0.0478
+zipcode,SF DBI recorded,text,Zip code the permit falls within,Context or explanatory attribute,0.0136
+location,SF DBI recorded,point,"The latitude and longitude associated with the permit (based on block and lot, i.e. APN)",Context or explanatory attribute,0.0478
+point_source,SF DBI recorded,text,"Data source for the coordinate point data, i.e. parcel centroid or EAS Address point.",Context or explanatory attribute,0.0478
+reroof,SF DBI recorded,text,A value of “Y” in the Re-roofing field indicates that the permit is for an re-roofing project,Context or explanatory attribute,88.9533
+record_id,SF DBI recorded,text,Unique ID created from concatenating P_ADDR_ID & AVS_ADDRESSES_ID,Identifier or join key; preserve as text,0.0
+data_as_of,SF DBI recorded,calendar_date,Timestamp when the record (row) was last updated in the source system,Context or explanatory attribute,0.0
+data_loaded_at,SF DBI recorded,calendar_date,Timestamp when the record (row) was was last updated/ loaded into DataSF data portal,Context or explanatory attribute,0.0
+filed_year,Derived or QA,derived,Calendar year extracted from filed_date.,Context or explanatory attribute,0.0
+filed_month,Derived or QA,derived,Year-month extracted from filed_date; joins to BLS CPI.,Context or explanatory attribute,0.0
+parcel_block_key,Derived or QA,derived,"Original permit block, stripped of surrounding whitespace and uppercased. Leading zeros preserved.",Identifier or join key; preserve as text,0.0
+parcel_lot_key,Derived or QA,derived,"Original permit lot, stripped of surrounding whitespace and uppercased. Leading zeros preserved.",Identifier or join key; preserve as text,0.0
+assessor_roll_year_key,Derived or QA,derived,"filed_year minus 2. This fiscal roll finishes June 30 in the year before filing. Historical context, not proof of real-time field availability.",Identifier or join key; preserve as text,0.0
+assessor_closed_roll_year,SF Assessor recorded,number,"The year listed represents the leading year of the fiscal year that the assessed value is effective for taxation purposes. For example, 2009 represents the 2009-2010 fiscal year during which the assessed values listed were effective (i.e. billed and collected). Note that a fiscal year starts July 1st and ends June 30th so that 2009 would start on July 1st, 2009 and end on June 30th 2010.",Context or explanatory attribute,2.1404
+assessor_parcel_number,SF Assessor recorded,text,Block and Lot Number (Full Assessor Parcel Number),Identifier or join key; preserve as text,2.1404
+assessor_block,SF Assessor recorded,text,The block portion of the parcel number broken out.,Context or explanatory attribute,2.1404
+assessor_lot,SF Assessor recorded,text,The lot portion of the parcel number broken out.,Context or explanatory attribute,2.1404
+assessor_use_code,SF Assessor recorded,text,"Use Codes group together related property class codes. They are defined by the field Use Definition. See also the field ""Property Class Code."" Property class codes and their related use codes are defined in the reference dataset: https://data.sfgov.org/d/pa56-ek2h",Context or explanatory attribute,2.1404
+assessor_use_definition,SF Assessor recorded,text,"The definition for the field ""Use Code."" Property class codes and their related use codes are defined in the reference dataset: https://data.sfgov.org/d/pa56-ek2h",Context or explanatory attribute,2.1404
+assessor_property_class_code,SF Assessor recorded,text,"Property type code defined in the field ""Property Class Code Definition."" Property class codes and their related use codes are defined in the reference dataset: https://data.sfgov.org/d/pa56-ek2h
+
+Please note, VCIX was truncated in the source and at the time records marked VCI could be VCIX. This is a rare code and indicates vacant land with restrictions as opposed to without.",Context or explanatory attribute,2.1404
+assessor_property_class_code_definition,SF Assessor recorded,text,"Property type definition (name) based that defines the code in the field ""Property Class Code."" Property class codes and their related use codes are defined in the reference dataset: https://data.sfgov.org/d/pa56-ek2h
+
+Please note, the property use code VCIX was truncated in the source and at the time records marked VCI could be VCIX. This is a rare code and indicates vacant land with restrictions as opposed to without.
+",Context or explanatory attribute,2.1404
+assessor_year_property_built,SF Assessor recorded,text,Year improvement was built (can be blend of original and newer construction),Context or explanatory attribute,5.7974
+assessor_number_of_stories,SF Assessor recorded,number,Number of stories,Context or explanatory attribute,2.1404
+assessor_number_of_units,SF Assessor recorded,number,Number of units,Context or explanatory attribute,2.1404
+assessor_zoning_code,SF Assessor recorded,text,Zoning code of property as of last sale.,Context or explanatory attribute,2.1404
+assessor_construction_type,SF Assessor recorded,text,Generally type of construction. See code book for construction type definitions.,Context or explanatory attribute,2.1404
+assessor_property_area,SF Assessor recorded,number,Square footage of property,Context or explanatory attribute,2.1411
+assessor_lot_area,SF Assessor recorded,number,Square footage of lot,Context or explanatory attribute,2.1404
+assessor_row_id,SF Assessor recorded,text,This is an identifier unique to each row for the purposes of managing updates to the dataset. It is the concatenation of YYYYMMDD corresponding to the January 1 of the roll year for the record and Parcel Number.,Identifier or join key; preserve as text,2.1404
+assessor_data_as_of,SF Assessor recorded,calendar_date,Timestamp when the record was last pulled from the source system,Context or explanatory attribute,2.1404
+assessor_data_loaded_at,SF Assessor recorded,calendar_date,Timestamp when the record (row) was was last updated/ loaded into DataSF data portal,Context or explanatory attribute,2.1404
+assessor_matched,Derived or QA,derived,"True when block, lot and lagged roll year find one assessor row; unmatched permit rows are retained.",Context or explanatory attribute,0.0
+cpi_u_us_all_items_nsa,BLS recorded,derived,"BLS CUUR0000SA0 monthly U.S. city average all-items CPI-U, not seasonally adjusted; index base 1982-84=100.",Context or explanatory attribute,0.0
+cpi_series_id,BLS recorded,derived,BLS published series identifier CUUR0000SA0.,Context or explanatory attribute,0.0
+filing_to_issuance_days,Derived or QA,derived,"issued_date minus filed_date in calendar days; missing if either date is missing, interval negative, or issue date after snapshot. Includes applicant and agency elapsed time.",Outcome or derived diagnostic; exclude from predictors of issuance,7.4272
+filing_to_approval_days,Derived or QA,derived,"approved_date minus filed_date in calendar days, valid nonnegative intervals through snapshot only.",Outcome or derived diagnostic; exclude from predictors of issuance,10.6336
+approval_to_issuance_days,Derived or QA,derived,"issued_date minus approved_date in calendar days, valid nonnegative intervals through snapshot only.",Outcome or derived diagnostic; exclude from predictors of issuance,10.9685
+issuance_to_completion_days,Derived or QA,derived,"completed_date minus issued_date in calendar days, valid nonnegative intervals through snapshot only. Administrative interval, not measured active construction time.",Outcome or derived diagnostic; exclude from predictors of issuance,35.1318
+invalid_issuance_chronology,Derived or QA,derived,True if a recorded issue date precedes filed_date or follows the analysis snapshot date.,Context or explanatory attribute,0.0
+has_recorded_issuance,Derived or QA,derived,True if issued_date parses as a date; may include records flagged invalid_issuance_chronology.,Context or explanatory attribute,0.0
+observed_at_least_365_days,Derived or QA,derived,True when snapshot_date_utc minus filed_date is at least 365 calendar days.,Outcome or derived diagnostic; exclude from predictors of issuance,0.0
+issued_within_365_days,Derived or QA,derived,For records observed at least 365 days with valid chronology: True if recorded issue interval is 0 to 365 days inclusive; False if later or no issue date is recorded. Missing for invalid chronology or insufficient follow-up. False is not synonymous with backlog.,Outcome or derived diagnostic; exclude from predictors of issuance,0.0116
+building_age_at_filing,Derived or QA,derived,"filed_year minus assessor_year_property_built. Missing if built year is absent, below 1700 or after filing year. Source built year can blend original and later construction.",Context or explanatory attribute,5.7974
+building_age_group,Derived or QA,derived,"Age bands 0-29, 30-59, 60-99 and 100+ years. Missing age stays missing.",Context or explanatory attribute,5.7974
+estimated_cost_2024_usd_cpi,Derived or QA,derived,"Nonnegative estimated_cost multiplied by the 2024 mean monthly CPI (313.6888333333333) divided by filing-month CPI. Broad purchasing-power comparison only, not a construction input cost index.",Context or explanatory attribute,8.702
+estimate_revision_usd,Derived or QA,derived,"revised_cost minus estimated_cost if both are nonnegative; an estimate revision, not observed cost overrun.",Outcome or derived diagnostic; exclude from predictors of issuance,10.4597
+estimate_revision_pct,Derived or QA,derived,"100 * (revised_cost-estimated_cost)/estimated_cost, requiring estimated_cost > 0 and revised_cost >= 0.",Outcome or derived diagnostic; exclude from predictors of issuance,10.4603
+snapshot_date_utc,Derived or QA,derived,Analysis cutoff 2026-10-22 UTC. Data downloaded on 2026-10-23 India time; per-source retrieval timestamps retained in metadata.,Lifecycle or snapshot field; check availability before predictive use,0.0

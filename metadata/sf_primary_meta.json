@@ -1,0 +1,3343 @@
+{
+  "id" : "f2jc-ivnc",
+  "name" : "Building Permits Deduplicated on Primary Address",
+  "assetType" : "filter",
+  "averageRating" : 0,
+  "category" : "Housing and Buildings",
+  "createdAt" : 1740600569,
+  "description" : "<strong>This is a filtered view of the <u><a href=\"https://data.sfgov.org/d/i98e-djp9/\">Building Permits</a></u> dataset. This dataset only shows building permits where the 'Primary Address Flag' is equal to \"Y\", indicating it is the primary address. </strong>\n\n<strong>A. SUMMARY</strong>\nThe dataset includes details of all building permit applications filed with the Department of Building Inspection. Permit numbers and associated information may be repeated in multiple rows if there are multiple addresses associated with the permit. To view the deduplicated building permits dataset with just the primary address, <u><a href=\"https://data.sfgov.org/Housing-and-Buildings/Building-Permits-Deduplicated-on-Primary-Address/f2jc-ivnc\">click here</a></u>. Data is uploaded nightly by DBI. Users can view associated addenda, routing, and inspection information for each permit in the dataset online through DBI’s Permit Tracking System <u><a href=\"https://dbiweb02.sfgov.org/dbipts/\">here</a></u>.\n\n<b> A full data dictionary for this dataset is available by <u><a href=\"https://sfdigitalservices.gitbook.io/dataset-explainers/dbi-building-permits-and-permit-addenda-data/building-permits-data-dictionary\">clicking here.</a></u> </b>\n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nThe dataset is created by extracting permit characteristics and key dates (including permit filing, issuance, and completion dates) from DBI’s Permit Tracking System.\n\n<strong>C. UPDATE PROCESS</strong>\nThe process that builds this dataset will run nightly and include all permits entered into the system up to the time of the refresh (see the “data as of” column in the dataset).\n\n<strong>D. HOW TO USE THIS DATASET</strong>\nUsers can use this dataset to search for all permits associated with a specific address or parcel number and view characteristics like addresses, permit descriptions of work, unit counts, valuations, etc. If the analytical objective is to measure permitting trends for all addresses, we recommend using the primary address building permits dataset.\n\n<b>Note:</b> if you need to open this dataset in Excel, use one of the pre-filtered datasets. Opening the main dataset in Excel will cause some data to be lost as there are more than one million rows in the full dataset.\n\n1. <u><a href=\"https://data.sfgov.org/d/p4e4-a5a7\">Building Permits filed on or after January 1, 2013</a></u>\n2. <u><a href=\"https://data.sfgov.org/d/4jpb-z4kk\">Building Permits filed before January 1, 2013</a></u> \n\n<strong>E. RELATED DATASETS</strong>\n<b>Department of Building Inspections Permits Data</b>\n<u><a href=\"https://data.sfgov.org/Housing-and-Buildings/Building-Permits/i98e-djp9\">Building Permits (Unique)</a></u>\n<u><a href=\"https://data.sfgov.org/Housing-and-Buildings/Department-of-Building-Inspection-Permit-Addenda-w/87xy-gk8d\">Building Permit Addenda with Routing</a></u>\n<u><a href=\"https://data.sfgov.org/Housing-and-Buildings/Building-Permits-Contacts/3pee-9qhc\">Building Permits Contacts</a></u>\n<u><a href=\"https://data.sfgov.org/Housing-and-Buildings/Electrical-Permits/ftty-kx6y\">Electrical Permits</a></u>\n<u><a href=\"https://data.sfgov.org/Housing-and-Buildings/Plumbing-Permits/a6aw-rudh\">Plumbing Permits</a></u>\n<u><a href=\"https://data.sfgov.org/Housing-and-Buildings/Boiler-Permits/5dp4-gtxk\">Boiler Permits</a></u>\n<u><a href=\"https://data.sfgov.org/Housing-and-Buildings/Dwelling-Unit-Completion-Counts-by-Building-Permit/j67f-aayr\">Dwelling Unit Completion Counts by Building Permit</a></u>\n\n<b>Planning Department Permits</b>\n<u><a href=\"https://data.sfgov.org/Housing-and-Buildings/SF-Planning-Permitting-Data/kncr-c6jw\">Planning Department Permits</a></u>\n\n<b>Public Works Construction Permits</b>\n<u><a href=\"https://data.sfgov.org/City-Infrastructure/Street-Use-Permits/b6tj-gt35\">Department of Public Works Street Use Permits</a></u>\n<u><a href=\"https://data.sfgov.org/City-Infrastructure/Large-Utility-Excavation-Permits/i926-ujnc\">Department of Public Works Large Utility Excavation Permits</a></u>\n\n<b>Fire Department Permits</b>\n<u><a href=\"https://data.sfgov.org/Housing-and-Buildings/Fire-Permits/893e-xam6\">Fire Department Permits</a></u>\n\n<b>Other housing/ construction related datasets related to building permits</b>\n<u><a href=\"https://data.sfgov.org/browse?q=SF%20Development%20Pipeline&sortBy=newest&utf8=%E2%9C%93\">Planning Department Housing Development Pipeline Quarterly datasets</a></u>\n\n<b>Mayor’s Office of Housing and Community Development: Affordable Housing Pipeline</b>\n<u><a href=\"https://data.sfgov.org/Housing-and-Buildings/Affordable-Housing-Pipeline/aaxw-2cb8\">Affordable Housing Pipeline</a></u>\n\nFor even more permit datasets, <u><a href=\"https://datasf.org/opendata/\">click this link</a></u> and search “Permits.”",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "domainCName" : "data.sf.gov",
+  "downloadCount" : 6318,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "PDDL",
+  "locked" : false,
+  "modifyingViewUid" : "i98e-djp9",
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41516458,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1740601854,
+  "publicationGroup" : 19049372,
+  "publicationStage" : "published",
+  "queryString" : "SELECT\n  `permit_number`,\n  `permit_type`,\n  `permit_type_definition`,\n  `permit_creation_date`,\n  `block`,\n  `lot`,\n  `street_number`,\n  `street_number_suffix`,\n  `street_name`,\n  `street_suffix`,\n  `unit`,\n  `unit_suffix`,\n  `description`,\n  `status`,\n  `status_date`,\n  `filed_date`,\n  `issued_date`,\n  `completed_date`,\n  `first_construction_document_date`,\n  `structural_notification`,\n  `number_of_existing_stories`,\n  `number_of_proposed_stories`,\n  `voluntary_soft_story_retrofit`,\n  `fire_only_permit`,\n  `estimated_cost`,\n  `revised_cost`,\n  `existing_use`,\n  `existing_units`,\n  `proposed_use`,\n  `proposed_units`,\n  `plansets`,\n  `tidf_compliance`,\n  `existing_occupancy`,\n  `proposed_occupancy`,\n  `existing_construction_type`,\n  `existing_construction_type_description`,\n  `proposed_construction_type`,\n  `proposed_construction_type_description`,\n  `site_permit`,\n  `last_permit_activity_date`,\n  `application_submission_method`,\n  `adu`,\n  `primary_address_flag`,\n  `supervisor_district`,\n  `neighborhoods_analysis_boundaries`,\n  `zipcode`,\n  `location`,\n  `point_source`,\n  `record_id`,\n  `data_as_of`,\n  `data_loaded_at`\nWHERE `primary_address_flag` IN (\"Y\")",
+  "rowsUpdatedAt" : 1792672287,
+  "rowsUpdatedBy" : "dbag-6qd9",
+  "tableId" : 20008432,
+  "totalTimesRated" : 0,
+  "viewCount" : 3667,
+  "viewLastModified" : 1740615309,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1681191066,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7028292,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1681190943,
+    "targetAudience" : "public",
+    "workflowId" : 2546,
+    "reviewer" : {
+      "id" : "95z8-r5hw",
+      "displayName" : "Cody Xuereb"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1681191066,
+      "failureCount" : 0,
+      "startedAt" : 1681191066,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "95z8-r5hw",
+      "displayName" : "Cody Xuereb"
+    }
+  }, {
+    "message" : "The `strict_permissions` flag must be on to enable internal approvals.",
+    "state" : "unsubmittable",
+    "targetAudience" : "internal",
+    "workflowId" : 5264
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 615594421,
+    "name" : "Permit Number",
+    "dataTypeName" : "text",
+    "description" : "Permit Number. Permits that start with 'M' are miscellaneous permits for this like street use or address creation.",
+    "fieldName" : "permit_number",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679846,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "W20021207840",
+      "null" : "0",
+      "top" : [ {
+        "item" : "200506235870",
+        "count" : "1"
+      }, {
+        "item" : "9213345",
+        "count" : "1"
+      }, {
+        "item" : "200710044630",
+        "count" : "1"
+      }, {
+        "item" : "8508913",
+        "count" : "1"
+      }, {
+        "item" : "200102061424",
+        "count" : "1"
+      }, {
+        "item" : "201508073664",
+        "count" : "1"
+      }, {
+        "item" : "200710175705",
+        "count" : "1"
+      }, {
+        "item" : "200703307671",
+        "count" : "1"
+      }, {
+        "item" : "M38917",
+        "count" : "1"
+      }, {
+        "item" : "201708316619",
+        "count" : "1"
+      }, {
+        "item" : "8406349",
+        "count" : "1"
+      }, {
+        "item" : "8304376",
+        "count" : "1"
+      }, {
+        "item" : "200204103572",
+        "count" : "1"
+      }, {
+        "item" : "200607035608",
+        "count" : "1"
+      }, {
+        "item" : "8700986",
+        "count" : "1"
+      }, {
+        "item" : "8405454",
+        "count" : "1"
+      }, {
+        "item" : "9920046",
+        "count" : "1"
+      }, {
+        "item" : "200210189402",
+        "count" : "1"
+      }, {
+        "item" : "201105035189",
+        "count" : "1"
+      }, {
+        "item" : "201504073012",
+        "count" : "1"
+      } ],
+      "smallest" : "0304329",
+      "count" : "1124885",
+      "cardinality" : "1124885"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594422,
+    "name" : "Permit Type",
+    "dataTypeName" : "text",
+    "description" : "Type of permit (i.e. Permit Application Form number)",
+    "fieldName" : "permit_type",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 156543632,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "8",
+      "null" : "0",
+      "top" : [ {
+        "item" : "8",
+        "count" : "857962"
+      }, {
+        "item" : "3",
+        "count" : "224222"
+      }, {
+        "item" : "4",
+        "count" : "19426"
+      }, {
+        "item" : "2",
+        "count" : "10811"
+      }, {
+        "item" : "6",
+        "count" : "6168"
+      }, {
+        "item" : "7",
+        "count" : "3697"
+      }, {
+        "item" : "1",
+        "count" : "1937"
+      }, {
+        "item" : "5",
+        "count" : "662"
+      } ],
+      "smallest" : "1",
+      "count" : "1124885",
+      "cardinality" : "8"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594423,
+    "name" : "Permit Type Definition",
+    "dataTypeName" : "text",
+    "description" : "Definition of each permit type",
+    "fieldName" : "permit_type_definition",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679878,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "wall or painted sign",
+      "null" : "0",
+      "top" : [ {
+        "item" : "otc alterations permit",
+        "count" : "857962"
+      }, {
+        "item" : "additions alterations or repairs",
+        "count" : "224222"
+      }, {
+        "item" : "sign - erect",
+        "count" : "19426"
+      }, {
+        "item" : "new construction wood frame",
+        "count" : "10811"
+      }, {
+        "item" : "demolitions",
+        "count" : "6168"
+      }, {
+        "item" : "wall or painted sign",
+        "count" : "3697"
+      }, {
+        "item" : "new construction",
+        "count" : "1937"
+      }, {
+        "item" : "grade or quarry or fill or excavate",
+        "count" : "662"
+      } ],
+      "smallest" : "additions alterations or repairs",
+      "count" : "1124885",
+      "cardinality" : "8"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594424,
+    "name" : "Permit Creation Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date that application is created in permit tracking system.",
+    "fieldName" : "permit_creation_date",
+    "position" : 4,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 145679833,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "2025-08-07T18:20:14.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1991-08-30T00:00:00.000",
+        "count" : "336"
+      }, {
+        "item" : "2017-09-15T00:00:00.000",
+        "count" : "329"
+      }, {
+        "item" : "2007-10-12T00:00:00.000",
+        "count" : "312"
+      }, {
+        "item" : "2017-09-14T00:00:00.000",
+        "count" : "286"
+      }, {
+        "item" : "2014-06-27T00:00:00.000",
+        "count" : "270"
+      }, {
+        "item" : "2018-09-14T00:00:00.000",
+        "count" : "266"
+      }, {
+        "item" : "2018-10-09T00:00:00.000",
+        "count" : "253"
+      }, {
+        "item" : "2017-09-11T00:00:00.000",
+        "count" : "251"
+      }, {
+        "item" : "1999-06-30T00:00:00.000",
+        "count" : "247"
+      }, {
+        "item" : "2019-10-15T00:00:00.000",
+        "count" : "247"
+      }, {
+        "item" : "2017-09-13T00:00:00.000",
+        "count" : "241"
+      }, {
+        "item" : "2014-06-30T00:00:00.000",
+        "count" : "237"
+      }, {
+        "item" : "1990-09-27T00:00:00.000",
+        "count" : "234"
+      }, {
+        "item" : "2016-05-25T00:00:00.000",
+        "count" : "225"
+      }, {
+        "item" : "2017-11-21T00:00:00.000",
+        "count" : "224"
+      }, {
+        "item" : "2018-11-13T00:00:00.000",
+        "count" : "222"
+      }, {
+        "item" : "2017-09-12T00:00:00.000",
+        "count" : "221"
+      }, {
+        "item" : "2018-10-10T00:00:00.000",
+        "count" : "219"
+      }, {
+        "item" : "2016-11-14T00:00:00.000",
+        "count" : "217"
+      }, {
+        "item" : "2019-11-12T00:00:00.000",
+        "count" : "214"
+      } ],
+      "smallest" : "1901-03-10T00:07:00.000",
+      "count" : "1124885",
+      "cardinality" : "98463"
+    },
+    "format" : {
+      "view" : "date_ymd_time"
+    }
+  }, {
+    "id" : 615594425,
+    "name" : "Block",
+    "dataTypeName" : "text",
+    "description" : "Block",
+    "fieldName" : "block",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679842,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "9999",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3708",
+        "count" : "6716"
+      }, {
+        "item" : "3705",
+        "count" : "3645"
+      }, {
+        "item" : "3717",
+        "count" : "3610"
+      }, {
+        "item" : "0289",
+        "count" : "3362"
+      }, {
+        "item" : "3709",
+        "count" : "3207"
+      }, {
+        "item" : "3713",
+        "count" : "3171"
+      }, {
+        "item" : "3707",
+        "count" : "2894"
+      }, {
+        "item" : "3710",
+        "count" : "2680"
+      }, {
+        "item" : "3721",
+        "count" : "2626"
+      }, {
+        "item" : "0259",
+        "count" : "2540"
+      }, {
+        "item" : "3722",
+        "count" : "2459"
+      }, {
+        "item" : "7295",
+        "count" : "2195"
+      }, {
+        "item" : "0288",
+        "count" : "2172"
+      }, {
+        "item" : "3735",
+        "count" : "2154"
+      }, {
+        "item" : "0292",
+        "count" : "2121"
+      }, {
+        "item" : "3706",
+        "count" : "2110"
+      }, {
+        "item" : "0263",
+        "count" : "2036"
+      }, {
+        "item" : "0262",
+        "count" : "1994"
+      }, {
+        "item" : "0309",
+        "count" : "1944"
+      }, {
+        "item" : "0266",
+        "count" : "1922"
+      } ],
+      "smallest" : ".....",
+      "count" : "1124885",
+      "cardinality" : "5227"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594426,
+    "name" : "Lot",
+    "dataTypeName" : "text",
+    "description" : "Lot",
+    "fieldName" : "lot",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679848,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "999",
+      "null" : "0",
+      "top" : [ {
+        "item" : "001",
+        "count" : "56536"
+      }, {
+        "item" : "006",
+        "count" : "30094"
+      }, {
+        "item" : "003",
+        "count" : "29695"
+      }, {
+        "item" : "005",
+        "count" : "29190"
+      }, {
+        "item" : "007",
+        "count" : "28693"
+      }, {
+        "item" : "002",
+        "count" : "28581"
+      }, {
+        "item" : "008",
+        "count" : "28528"
+      }, {
+        "item" : "009",
+        "count" : "27816"
+      }, {
+        "item" : "004",
+        "count" : "27634"
+      }, {
+        "item" : "011",
+        "count" : "25579"
+      }, {
+        "item" : "012",
+        "count" : "25561"
+      }, {
+        "item" : "010",
+        "count" : "24200"
+      }, {
+        "item" : "016",
+        "count" : "23568"
+      }, {
+        "item" : "014",
+        "count" : "23567"
+      }, {
+        "item" : "013",
+        "count" : "23337"
+      }, {
+        "item" : "015",
+        "count" : "23036"
+      }, {
+        "item" : "021",
+        "count" : "22909"
+      }, {
+        "item" : "017",
+        "count" : "22760"
+      }, {
+        "item" : "020",
+        "count" : "22572"
+      }, {
+        "item" : "018",
+        "count" : "22172"
+      } ],
+      "smallest" : "....",
+      "count" : "1124885",
+      "cardinality" : "1532"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594427,
+    "name" : "Street Number",
+    "dataTypeName" : "text",
+    "description" : "Street Number",
+    "fieldName" : "street_number",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679834,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "999",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "15902"
+      }, {
+        "item" : "101",
+        "count" : "6975"
+      }, {
+        "item" : "100",
+        "count" : "6531"
+      }, {
+        "item" : "50",
+        "count" : "6257"
+      }, {
+        "item" : "555",
+        "count" : "5190"
+      }, {
+        "item" : "2",
+        "count" : "5122"
+      }, {
+        "item" : "201",
+        "count" : "4928"
+      }, {
+        "item" : "150",
+        "count" : "4455"
+      }, {
+        "item" : "55",
+        "count" : "4190"
+      }, {
+        "item" : "333",
+        "count" : "3843"
+      }, {
+        "item" : "300",
+        "count" : "3629"
+      }, {
+        "item" : "601",
+        "count" : "3620"
+      }, {
+        "item" : "600",
+        "count" : "3383"
+      }, {
+        "item" : "350",
+        "count" : "3257"
+      }, {
+        "item" : "44",
+        "count" : "3134"
+      }, {
+        "item" : "45",
+        "count" : "3105"
+      }, {
+        "item" : "301",
+        "count" : "3105"
+      }, {
+        "item" : "120",
+        "count" : "3061"
+      }, {
+        "item" : "500",
+        "count" : "2941"
+      }, {
+        "item" : "425",
+        "count" : "2896"
+      } ],
+      "smallest" : "0",
+      "count" : "1124885",
+      "cardinality" : "5875"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594428,
+    "name" : "Street Number Suffix",
+    "dataTypeName" : "text",
+    "description" : "Street Number Suffix",
+    "fieldName" : "street_number_suffix",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145721266,
+    "cachedContents" : {
+      "non_null" : "8564",
+      "largest" : "V",
+      "null" : "1116321",
+      "top" : [ {
+        "item" : "A",
+        "count" : "5466"
+      }, {
+        "item" : "V",
+        "count" : "1752"
+      }, {
+        "item" : "B",
+        "count" : "874"
+      }, {
+        "item" : "C",
+        "count" : "188"
+      }, {
+        "item" : "D",
+        "count" : "97"
+      }, {
+        "item" : "E",
+        "count" : "42"
+      }, {
+        "item" : "F",
+        "count" : "25"
+      }, {
+        "item" : "P",
+        "count" : "24"
+      }, {
+        "item" : "0",
+        "count" : "19"
+      }, {
+        "item" : "R",
+        "count" : "15"
+      }, {
+        "item" : "K",
+        "count" : "13"
+      }, {
+        "item" : "H",
+        "count" : "9"
+      }, {
+        "item" : "G",
+        "count" : "8"
+      }, {
+        "item" : "L",
+        "count" : "6"
+      }, {
+        "item" : "S",
+        "count" : "5"
+      }, {
+        "item" : "½",
+        "count" : "4"
+      }, {
+        "item" : "4",
+        "count" : "4"
+      }, {
+        "item" : "J",
+        "count" : "4"
+      }, {
+        "item" : "N",
+        "count" : "2"
+      }, {
+        "item" : "1",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "1124885",
+      "cardinality" : "25"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594429,
+    "name" : "Street Name",
+    "dataTypeName" : "text",
+    "description" : "Street Name",
+    "fieldName" : "street_name",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679826,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "Zoo",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Market",
+        "count" : "29115"
+      }, {
+        "item" : "California",
+        "count" : "26341"
+      }, {
+        "item" : "Mission",
+        "count" : "19586"
+      }, {
+        "item" : "Montgomery",
+        "count" : "13222"
+      }, {
+        "item" : "Geary",
+        "count" : "11017"
+      }, {
+        "item" : "20th",
+        "count" : "9500"
+      }, {
+        "item" : "Bush",
+        "count" : "8666"
+      }, {
+        "item" : "Sacramento",
+        "count" : "8313"
+      }, {
+        "item" : "Post",
+        "count" : "8305"
+      }, {
+        "item" : "Folsom",
+        "count" : "8264"
+      }, {
+        "item" : "03rd",
+        "count" : "8194"
+      }, {
+        "item" : "17th",
+        "count" : "8158"
+      }, {
+        "item" : "Jackson",
+        "count" : "8142"
+      }, {
+        "item" : "Pacific",
+        "count" : "8013"
+      }, {
+        "item" : "Pine",
+        "count" : "8008"
+      }, {
+        "item" : "24th",
+        "count" : "7945"
+      }, {
+        "item" : "18th",
+        "count" : "7912"
+      }, {
+        "item" : "Sutter",
+        "count" : "7825"
+      }, {
+        "item" : "Clay",
+        "count" : "7814"
+      }, {
+        "item" : "19th",
+        "count" : "7711"
+      } ],
+      "smallest" : "01st",
+      "count" : "1124885",
+      "cardinality" : "1949"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594430,
+    "name" : "Street Suffix",
+    "dataTypeName" : "text",
+    "description" : "Street Suffix",
+    "fieldName" : "street_suffix",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679883,
+    "cachedContents" : {
+      "non_null" : "1110029",
+      "largest" : "Wy",
+      "null" : "14856",
+      "top" : [ {
+        "item" : "St",
+        "count" : "737189"
+      }, {
+        "item" : "Av",
+        "count" : "279895"
+      }, {
+        "item" : "Bl",
+        "count" : "23546"
+      }, {
+        "item" : "Dr",
+        "count" : "23418"
+      }, {
+        "item" : "Wy",
+        "count" : "20473"
+      }, {
+        "item" : "Tr",
+        "count" : "8693"
+      }, {
+        "item" : "Ct",
+        "count" : "5642"
+      }, {
+        "item" : "Pl",
+        "count" : "3280"
+      }, {
+        "item" : "Ln",
+        "count" : "2603"
+      }, {
+        "item" : "Hy",
+        "count" : "1207"
+      }, {
+        "item" : "Pz",
+        "count" : "1001"
+      }, {
+        "item" : "Cr",
+        "count" : "985"
+      }, {
+        "item" : "Rd",
+        "count" : "915"
+      }, {
+        "item" : "Pk",
+        "count" : "505"
+      }, {
+        "item" : "Al",
+        "count" : "440"
+      }, {
+        "item" : "Sw",
+        "count" : "87"
+      }, {
+        "item" : "Rw",
+        "count" : "47"
+      }, {
+        "item" : "Sq",
+        "count" : "26"
+      }, {
+        "item" : "Wk",
+        "count" : "19"
+      }, {
+        "item" : "Cg",
+        "count" : "16"
+      } ],
+      "smallest" : "Al",
+      "count" : "1124885",
+      "cardinality" : "24"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594431,
+    "name" : "Unit",
+    "dataTypeName" : "text",
+    "description" : "Unit",
+    "fieldName" : "unit",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679867,
+    "cachedContents" : {
+      "non_null" : "101655",
+      "largest" : "99",
+      "null" : "1023230",
+      "top" : [ {
+        "item" : "0",
+        "count" : "69496"
+      }, {
+        "item" : "1",
+        "count" : "6572"
+      }, {
+        "item" : "101",
+        "count" : "2690"
+      }, {
+        "item" : "2",
+        "count" : "2060"
+      }, {
+        "item" : "3",
+        "count" : "1413"
+      }, {
+        "item" : "201",
+        "count" : "936"
+      }, {
+        "item" : "4",
+        "count" : "896"
+      }, {
+        "item" : "6",
+        "count" : "601"
+      }, {
+        "item" : "5",
+        "count" : "587"
+      }, {
+        "item" : "301",
+        "count" : "402"
+      }, {
+        "item" : "7",
+        "count" : "355"
+      }, {
+        "item" : "102",
+        "count" : "345"
+      }, {
+        "item" : "202",
+        "count" : "339"
+      }, {
+        "item" : "8",
+        "count" : "332"
+      }, {
+        "item" : "302",
+        "count" : "298"
+      }, {
+        "item" : "11",
+        "count" : "270"
+      }, {
+        "item" : "9",
+        "count" : "254"
+      }, {
+        "item" : "401",
+        "count" : "251"
+      }, {
+        "item" : "10",
+        "count" : "222"
+      }, {
+        "item" : "103",
+        "count" : "208"
+      } ],
+      "smallest" : "0",
+      "count" : "1124885",
+      "cardinality" : "1133"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594432,
+    "name" : "Unit Suffix",
+    "dataTypeName" : "text",
+    "description" : "Unit Suffix",
+    "fieldName" : "unit_suffix",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679869,
+    "cachedContents" : {
+      "non_null" : "8425",
+      "largest" : "Y",
+      "null" : "1116460",
+      "top" : [ {
+        "item" : "A",
+        "count" : "2054"
+      }, {
+        "item" : "B",
+        "count" : "773"
+      }, {
+        "item" : "C",
+        "count" : "704"
+      }, {
+        "item" : "D",
+        "count" : "498"
+      }, {
+        "item" : "E",
+        "count" : "418"
+      }, {
+        "item" : "F",
+        "count" : "220"
+      }, {
+        "item" : "PARCEL A",
+        "count" : "219"
+      }, {
+        "item" : "HOA",
+        "count" : "215"
+      }, {
+        "item" : "COMML",
+        "count" : "209"
+      }, {
+        "item" : "W",
+        "count" : "170"
+      }, {
+        "item" : "LOWER",
+        "count" : "150"
+      }, {
+        "item" : "G",
+        "count" : "140"
+      }, {
+        "item" : "H",
+        "count" : "107"
+      }, {
+        "item" : "RESID'L",
+        "count" : "101"
+      }, {
+        "item" : "BLD 7",
+        "count" : "96"
+      }, {
+        "item" : "REAR BLDG",
+        "count" : "91"
+      }, {
+        "item" : "BLDG. 3",
+        "count" : "86"
+      }, {
+        "item" : "UPPER",
+        "count" : "85"
+      }, {
+        "item" : "N",
+        "count" : "73"
+      }, {
+        "item" : "FRONT BLDG",
+        "count" : "72"
+      } ],
+      "smallest" : "0",
+      "count" : "1124885",
+      "cardinality" : "293"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594433,
+    "name" : "Description",
+    "dataTypeName" : "text",
+    "description" : "Description of permit scope of work",
+    "fieldName" : "description",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679863,
+    "cachedContents" : {
+      "non_null" : "1108782",
+      "largest" : "zoning allows 3 unit const. in this property. (e) bldg & architectural features will be saved and",
+      "null" : "16103",
+      "top" : [ {
+        "item" : "reroofing",
+        "count" : "96353"
+      }, {
+        "item" : "street space",
+        "count" : "54424"
+      }, {
+        "item" : "street space permit",
+        "count" : "16186"
+      }, {
+        "item" : "reroofing.",
+        "count" : "6973"
+      }, {
+        "item" : "horizontal addition",
+        "count" : "6252"
+      }, {
+        "item" : "re-roofing: remove and replace roofing material / existing roofing material (in-kind)",
+        "count" : "6065"
+      }, {
+        "item" : "street space permit only.",
+        "count" : "4020"
+      }, {
+        "item" : "re-roofing",
+        "count" : "4012"
+      }, {
+        "item" : "sidewalk repair",
+        "count" : "3988"
+      }, {
+        "item" : "install aluminum windows",
+        "count" : "3852"
+      }, {
+        "item" : "reroof",
+        "count" : "3686"
+      }, {
+        "item" : "streetspace",
+        "count" : "3602"
+      }, {
+        "item" : "erect sign",
+        "count" : "2189"
+      }, {
+        "item" : "street space & sidewalk",
+        "count" : "2121"
+      }, {
+        "item" : "termite repair",
+        "count" : "2025"
+      }, {
+        "item" : "street space & sidewalk repair",
+        "count" : "1815"
+      }, {
+        "item" : "street space & sidewalk permit only.",
+        "count" : "1703"
+      }, {
+        "item" : "re - roofing",
+        "count" : "1396"
+      }, {
+        "item" : "sidewalk",
+        "count" : "1389"
+      }, {
+        "item" : "street space permit.",
+        "count" : "1381"
+      } ],
+      "smallest" : "`",
+      "count" : "1124885",
+      "cardinality" : "784926"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594434,
+    "name" : "Current Status",
+    "dataTypeName" : "text",
+    "description" : "Current Status. Note: this column should be in combination with the Approved, Issued, Completed dates.",
+    "fieldName" : "status",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679839,
+    "cachedContents" : {
+      "non_null" : "1124873",
+      "largest" : "withdrawn",
+      "null" : "12",
+      "top" : [ {
+        "item" : "complete",
+        "count" : "639167"
+      }, {
+        "item" : "issued",
+        "count" : "222825"
+      }, {
+        "item" : "expired",
+        "count" : "201266"
+      }, {
+        "item" : "cancelled",
+        "count" : "27167"
+      }, {
+        "item" : "filed",
+        "count" : "20446"
+      }, {
+        "item" : "withdrawn",
+        "count" : "9321"
+      }, {
+        "item" : "reinstated",
+        "count" : "1327"
+      }, {
+        "item" : "filing",
+        "count" : "1013"
+      }, {
+        "item" : "approved",
+        "count" : "908"
+      }, {
+        "item" : "disapproved",
+        "count" : "491"
+      }, {
+        "item" : "suspend",
+        "count" : "413"
+      }, {
+        "item" : "revoked",
+        "count" : "219"
+      }, {
+        "item" : "triage",
+        "count" : "207"
+      }, {
+        "item" : "plancheck",
+        "count" : "39"
+      }, {
+        "item" : "appeal",
+        "count" : "24"
+      }, {
+        "item" : "issuing",
+        "count" : "23"
+      }, {
+        "item" : "denied",
+        "count" : "5"
+      }, {
+        "item" : "inspection",
+        "count" : "4"
+      }, {
+        "item" : "upheld",
+        "count" : "2"
+      }, {
+        "item" : "incomplete",
+        "count" : "2"
+      } ],
+      "smallest" : "appeal",
+      "count" : "1124885",
+      "cardinality" : "23"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594435,
+    "name" : "Current Status Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "Current Status Date",
+    "fieldName" : "status_date",
+    "position" : 15,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 145679837,
+    "cachedContents" : {
+      "non_null" : "1124873",
+      "largest" : "2025-08-07T18:30:50.000",
+      "null" : "12",
+      "top" : [ {
+        "item" : "1983-03-04T00:00:00.000",
+        "count" : "6577"
+      }, {
+        "item" : "1986-03-04T00:00:00.000",
+        "count" : "2786"
+      }, {
+        "item" : "1989-09-24T00:00:00.000",
+        "count" : "2227"
+      }, {
+        "item" : "1992-05-13T00:00:00.000",
+        "count" : "679"
+      }, {
+        "item" : "1995-02-08T00:00:00.000",
+        "count" : "535"
+      }, {
+        "item" : "1999-03-02T00:00:00.000",
+        "count" : "520"
+      }, {
+        "item" : "1999-03-01T00:00:00.000",
+        "count" : "476"
+      }, {
+        "item" : "1988-02-09T00:00:00.000",
+        "count" : "432"
+      }, {
+        "item" : "1999-12-28T18:57:48.000",
+        "count" : "410"
+      }, {
+        "item" : "1995-08-15T00:00:00.000",
+        "count" : "399"
+      }, {
+        "item" : "1999-02-24T00:00:00.000",
+        "count" : "389"
+      }, {
+        "item" : "1995-02-15T00:00:00.000",
+        "count" : "385"
+      }, {
+        "item" : "1995-02-07T00:00:00.000",
+        "count" : "364"
+      }, {
+        "item" : "1988-02-10T00:00:00.000",
+        "count" : "341"
+      }, {
+        "item" : "1999-03-10T00:00:00.000",
+        "count" : "330"
+      }, {
+        "item" : "1998-05-29T00:00:00.000",
+        "count" : "324"
+      }, {
+        "item" : "1997-01-31T00:00:00.000",
+        "count" : "323"
+      }, {
+        "item" : "1996-02-20T00:00:00.000",
+        "count" : "301"
+      }, {
+        "item" : "1997-08-20T00:00:00.000",
+        "count" : "297"
+      }, {
+        "item" : "1999-03-08T00:00:00.000",
+        "count" : "289"
+      } ],
+      "smallest" : "1968-10-25T00:00:00.000",
+      "count" : "1124885",
+      "cardinality" : "528886"
+    },
+    "format" : {
+      "view" : "date_ymd_time"
+    }
+  }, {
+    "id" : 615594436,
+    "name" : "Filed Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date permit was filed in permit tracking system",
+    "fieldName" : "filed_date",
+    "position" : 16,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 145679828,
+    "cachedContents" : {
+      "non_null" : "1124545",
+      "largest" : "2025-08-07T18:20:14.000",
+      "null" : "340",
+      "top" : [ {
+        "item" : "1991-08-30T00:00:00.000",
+        "count" : "336"
+      }, {
+        "item" : "1990-09-27T00:00:00.000",
+        "count" : "234"
+      }, {
+        "item" : "1988-05-20T00:00:00.000",
+        "count" : "213"
+      }, {
+        "item" : "1999-06-30T00:00:00.000",
+        "count" : "208"
+      }, {
+        "item" : "1983-05-27T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "1989-06-30T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "1988-06-10T00:00:00.000",
+        "count" : "188"
+      }, {
+        "item" : "1988-11-04T00:00:00.000",
+        "count" : "187"
+      }, {
+        "item" : "1989-09-21T00:00:00.000",
+        "count" : "187"
+      }, {
+        "item" : "1990-09-12T00:00:00.000",
+        "count" : "182"
+      }, {
+        "item" : "1994-06-06T00:00:00.000",
+        "count" : "181"
+      }, {
+        "item" : "1998-11-12T00:00:00.000",
+        "count" : "175"
+      }, {
+        "item" : "1992-06-30T00:00:00.000",
+        "count" : "171"
+      }, {
+        "item" : "1989-12-04T00:00:00.000",
+        "count" : "171"
+      }, {
+        "item" : "1990-11-01T00:00:00.000",
+        "count" : "168"
+      }, {
+        "item" : "1993-10-09T00:00:00.000",
+        "count" : "166"
+      }, {
+        "item" : "1989-10-26T00:00:00.000",
+        "count" : "165"
+      }, {
+        "item" : "1996-09-09T00:00:00.000",
+        "count" : "164"
+      }, {
+        "item" : "1991-05-16T00:00:00.000",
+        "count" : "158"
+      }, {
+        "item" : "1990-10-09T00:00:00.000",
+        "count" : "158"
+      } ],
+      "smallest" : "1901-03-10T00:07:00.000",
+      "count" : "1124885",
+      "cardinality" : "767589"
+    },
+    "format" : {
+      "view" : "date_ymd_time"
+    }
+  }, {
+    "id" : 615594437,
+    "name" : "Issued Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date permit was issued (i.e. permit fees paid)",
+    "fieldName" : "issued_date",
+    "position" : 17,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 145679841,
+    "cachedContents" : {
+      "non_null" : "1069388",
+      "largest" : "2025-08-07T18:30:50.000",
+      "null" : "55497",
+      "top" : [ {
+        "item" : "1989-11-08T00:00:00.000",
+        "count" : "173"
+      }, {
+        "item" : "1987-07-06T00:00:00.000",
+        "count" : "162"
+      }, {
+        "item" : "1989-11-13T00:00:00.000",
+        "count" : "161"
+      }, {
+        "item" : "1993-11-12T00:00:00.000",
+        "count" : "159"
+      }, {
+        "item" : "1990-01-19T00:00:00.000",
+        "count" : "154"
+      }, {
+        "item" : "1997-10-06T00:00:00.000",
+        "count" : "154"
+      }, {
+        "item" : "1988-10-28T00:00:00.000",
+        "count" : "153"
+      }, {
+        "item" : "1996-10-16T00:00:00.000",
+        "count" : "152"
+      }, {
+        "item" : "1998-11-12T00:00:00.000",
+        "count" : "152"
+      }, {
+        "item" : "1999-08-30T00:00:00.000",
+        "count" : "151"
+      }, {
+        "item" : "1997-08-18T00:00:00.000",
+        "count" : "151"
+      }, {
+        "item" : "1990-11-14T00:00:00.000",
+        "count" : "146"
+      }, {
+        "item" : "1998-05-04T00:00:00.000",
+        "count" : "145"
+      }, {
+        "item" : "1996-11-25T00:00:00.000",
+        "count" : "144"
+      }, {
+        "item" : "1990-10-09T00:00:00.000",
+        "count" : "144"
+      }, {
+        "item" : "1998-06-15T00:00:00.000",
+        "count" : "142"
+      }, {
+        "item" : "1990-06-12T00:00:00.000",
+        "count" : "142"
+      }, {
+        "item" : "1989-12-01T00:00:00.000",
+        "count" : "142"
+      }, {
+        "item" : "1997-09-17T00:00:00.000",
+        "count" : "142"
+      }, {
+        "item" : "1990-09-04T00:00:00.000",
+        "count" : "141"
+      } ],
+      "smallest" : "1906-11-08T00:00:00.000",
+      "count" : "1124885",
+      "cardinality" : "742972"
+    },
+    "format" : {
+      "view" : "date_ymd_time"
+    }
+  }, {
+    "id" : 615594438,
+    "name" : "Completed Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date that completed work was finaled by inspection staff",
+    "fieldName" : "completed_date",
+    "position" : 18,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 145679835,
+    "cachedContents" : {
+      "non_null" : "643288",
+      "largest" : "2025-08-07T17:18:29.000",
+      "null" : "481597",
+      "top" : [ {
+        "item" : "1983-03-04T00:00:00.000",
+        "count" : "6548"
+      }, {
+        "item" : "1986-03-04T00:00:00.000",
+        "count" : "1391"
+      }, {
+        "item" : "1992-05-13T00:00:00.000",
+        "count" : "649"
+      }, {
+        "item" : "1991-12-17T00:00:00.000",
+        "count" : "144"
+      }, {
+        "item" : "1991-12-18T00:00:00.000",
+        "count" : "130"
+      }, {
+        "item" : "2009-12-03T00:00:00.000",
+        "count" : "128"
+      }, {
+        "item" : "1991-12-09T00:00:00.000",
+        "count" : "124"
+      }, {
+        "item" : "2007-02-01T00:00:00.000",
+        "count" : "123"
+      }, {
+        "item" : "1997-08-21T00:00:00.000",
+        "count" : "121"
+      }, {
+        "item" : "1985-08-08T00:00:00.000",
+        "count" : "118"
+      }, {
+        "item" : "2007-10-10T00:00:00.000",
+        "count" : "118"
+      }, {
+        "item" : "2008-03-14T00:00:00.000",
+        "count" : "116"
+      }, {
+        "item" : "1990-08-13T00:00:00.000",
+        "count" : "116"
+      }, {
+        "item" : "1988-12-13T00:00:00.000",
+        "count" : "115"
+      }, {
+        "item" : "2006-10-23T00:00:00.000",
+        "count" : "114"
+      }, {
+        "item" : "2010-09-24T00:00:00.000",
+        "count" : "114"
+      }, {
+        "item" : "2005-12-08T00:00:00.000",
+        "count" : "111"
+      }, {
+        "item" : "2009-11-17T00:00:00.000",
+        "count" : "111"
+      }, {
+        "item" : "1988-12-12T00:00:00.000",
+        "count" : "111"
+      }, {
+        "item" : "2009-04-01T00:00:00.000",
+        "count" : "111"
+      } ],
+      "smallest" : "1900-03-01T00:07:00.000",
+      "count" : "1124885",
+      "cardinality" : "233587"
+    },
+    "format" : {
+      "view" : "date_ymd_time"
+    }
+  }, {
+    "id" : 615594439,
+    "name" : "First Construction Document Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "For site permits, this is the date when the addenda marked as the first construction document (usually the first addenda) is issued.",
+    "fieldName" : "first_construction_document_date",
+    "position" : 19,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 145679830,
+    "cachedContents" : {
+      "non_null" : "12971",
+      "largest" : "2025-08-06T15:18:38.000",
+      "null" : "1111914",
+      "top" : [ {
+        "item" : "2019-12-31T00:00:00.000",
+        "count" : "14"
+      }, {
+        "item" : "1993-02-01T00:00:00.000",
+        "count" : "7"
+      }, {
+        "item" : "1992-11-03T00:00:00.000",
+        "count" : "7"
+      }, {
+        "item" : "1993-01-05T00:00:00.000",
+        "count" : "6"
+      }, {
+        "item" : "1992-09-11T00:00:00.000",
+        "count" : "6"
+      }, {
+        "item" : "1992-07-14T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "1993-02-26T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "1993-03-01T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "1993-02-09T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "1992-10-01T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "2011-08-15T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "1992-11-16T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "1993-01-15T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "1992-06-29T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "1993-02-18T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "1992-09-25T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "1993-04-14T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "1992-06-26T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2024-08-08T14:16:58.000",
+        "count" : "3"
+      }, {
+        "item" : "1992-12-10T00:00:00.000",
+        "count" : "3"
+      } ],
+      "smallest" : "1989-03-27T00:00:00.000",
+      "count" : "1124885",
+      "cardinality" : "12800"
+    },
+    "format" : {
+      "view" : "date_ymd_time"
+    }
+  }, {
+    "id" : 615594440,
+    "name" : "Structural Notification",
+    "dataTypeName" : "text",
+    "description" : "Structural Notification",
+    "fieldName" : "structural_notification",
+    "position" : 20,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679858,
+    "cachedContents" : {
+      "non_null" : "45897",
+      "largest" : "Y",
+      "null" : "1078988",
+      "top" : [ {
+        "item" : "Y",
+        "count" : "45897"
+      } ],
+      "smallest" : "Y",
+      "count" : "1124885",
+      "cardinality" : "1"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594441,
+    "name" : "Number of Existing Stories",
+    "dataTypeName" : "text",
+    "description" : "Number of Existing Stories",
+    "fieldName" : "number_of_existing_stories",
+    "position" : 21,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679845,
+    "cachedContents" : {
+      "non_null" : "943189",
+      "largest" : "999",
+      "null" : "181696",
+      "top" : [ {
+        "item" : "2",
+        "count" : "329145"
+      }, {
+        "item" : "3",
+        "count" : "216786"
+      }, {
+        "item" : "1",
+        "count" : "100518"
+      }, {
+        "item" : "4",
+        "count" : "69507"
+      }, {
+        "item" : "0",
+        "count" : "57104"
+      }, {
+        "item" : "5",
+        "count" : "19171"
+      }, {
+        "item" : "6",
+        "count" : "19033"
+      }, {
+        "item" : "7",
+        "count" : "12039"
+      }, {
+        "item" : "8",
+        "count" : "9212"
+      }, {
+        "item" : "9",
+        "count" : "6546"
+      }, {
+        "item" : "10",
+        "count" : "6354"
+      }, {
+        "item" : "12",
+        "count" : "5033"
+      }, {
+        "item" : "22",
+        "count" : "4884"
+      }, {
+        "item" : "30",
+        "count" : "4733"
+      }, {
+        "item" : "11",
+        "count" : "4674"
+      }, {
+        "item" : "23",
+        "count" : "4008"
+      }, {
+        "item" : "16",
+        "count" : "3904"
+      }, {
+        "item" : "25",
+        "count" : "3690"
+      }, {
+        "item" : "38",
+        "count" : "3564"
+      }, {
+        "item" : "20",
+        "count" : "3437"
+      } ],
+      "smallest" : "0",
+      "count" : "1124885",
+      "cardinality" : "136"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594442,
+    "name" : "Number of Proposed Stories",
+    "dataTypeName" : "text",
+    "description" : "Number of Proposed Stories",
+    "fieldName" : "number_of_proposed_stories",
+    "position" : 22,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679870,
+    "cachedContents" : {
+      "non_null" : "882751",
+      "largest" : "999",
+      "null" : "242134",
+      "top" : [ {
+        "item" : "2",
+        "count" : "324570"
+      }, {
+        "item" : "3",
+        "count" : "223985"
+      }, {
+        "item" : "1",
+        "count" : "89883"
+      }, {
+        "item" : "4",
+        "count" : "73277"
+      }, {
+        "item" : "5",
+        "count" : "19568"
+      }, {
+        "item" : "6",
+        "count" : "18919"
+      }, {
+        "item" : "7",
+        "count" : "11936"
+      }, {
+        "item" : "8",
+        "count" : "8989"
+      }, {
+        "item" : "9",
+        "count" : "6581"
+      }, {
+        "item" : "10",
+        "count" : "6104"
+      }, {
+        "item" : "12",
+        "count" : "5006"
+      }, {
+        "item" : "22",
+        "count" : "4835"
+      }, {
+        "item" : "30",
+        "count" : "4648"
+      }, {
+        "item" : "11",
+        "count" : "4608"
+      }, {
+        "item" : "23",
+        "count" : "3995"
+      }, {
+        "item" : "16",
+        "count" : "3900"
+      }, {
+        "item" : "25",
+        "count" : "3627"
+      }, {
+        "item" : "38",
+        "count" : "3551"
+      }, {
+        "item" : "20",
+        "count" : "3355"
+      }, {
+        "item" : "26",
+        "count" : "3244"
+      } ],
+      "smallest" : "0",
+      "count" : "1124885",
+      "cardinality" : "146"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594443,
+    "name" : "Voluntary Soft-Story Retrofit",
+    "dataTypeName" : "text",
+    "description" : "Voluntary Soft-Story Retrofit",
+    "fieldName" : "voluntary_soft_story_retrofit",
+    "position" : 23,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679866,
+    "cachedContents" : {
+      "non_null" : "84",
+      "largest" : "Y",
+      "null" : "1124801",
+      "top" : [ {
+        "item" : "Y",
+        "count" : "84"
+      } ],
+      "smallest" : "Y",
+      "count" : "1124885",
+      "cardinality" : "1"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594444,
+    "name" : "Fire Only Permit",
+    "dataTypeName" : "text",
+    "description" : "Fire Only Permit - i.e. permits where SFFD is is the only reviewing agency.",
+    "fieldName" : "fire_only_permit",
+    "position" : 24,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679860,
+    "cachedContents" : {
+      "non_null" : "49105",
+      "largest" : "Y",
+      "null" : "1075780",
+      "top" : [ {
+        "item" : "Y",
+        "count" : "49105"
+      } ],
+      "smallest" : "Y",
+      "count" : "1124885",
+      "cardinality" : "1"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594445,
+    "name" : "Estimated Cost",
+    "dataTypeName" : "text",
+    "description" : "Estimated project cost",
+    "fieldName" : "estimated_cost",
+    "position" : 25,
+    "renderTypeName" : "text",
+    "tableColumnId" : 156543631,
+    "cachedContents" : {
+      "non_null" : "995943",
+      "largest" : "99999.0",
+      "null" : "128942",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "98465"
+      }, {
+        "item" : "5000.0",
+        "count" : "38324"
+      }, {
+        "item" : "10000.0",
+        "count" : "36510"
+      }, {
+        "item" : "15000.0",
+        "count" : "26530"
+      }, {
+        "item" : "20000.0",
+        "count" : "26511"
+      }, {
+        "item" : "3000.0",
+        "count" : "24634"
+      }, {
+        "item" : "2000.0",
+        "count" : "23687"
+      }, {
+        "item" : "1000.0",
+        "count" : "22327"
+      }, {
+        "item" : "8000.0",
+        "count" : "17989"
+      }, {
+        "item" : "25000.0",
+        "count" : "17899"
+      }, {
+        "item" : "4000.0",
+        "count" : "17727"
+      }, {
+        "item" : "30000.0",
+        "count" : "17591"
+      }, {
+        "item" : "6000.0",
+        "count" : "16105"
+      }, {
+        "item" : "2500.0",
+        "count" : "15411"
+      }, {
+        "item" : "500.0",
+        "count" : "14634"
+      }, {
+        "item" : "50000.0",
+        "count" : "14478"
+      }, {
+        "item" : "12000.0",
+        "count" : "14477"
+      }, {
+        "item" : "1500.0",
+        "count" : "14316"
+      }, {
+        "item" : "40000.0",
+        "count" : "12186"
+      }, {
+        "item" : "3500.0",
+        "count" : "10656"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1124885",
+      "cardinality" : "37447"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594446,
+    "name" : "Revised Cost",
+    "dataTypeName" : "text",
+    "description" : "Revised project cost after project review",
+    "fieldName" : "revised_cost",
+    "position" : 26,
+    "renderTypeName" : "text",
+    "tableColumnId" : 156543630,
+    "cachedContents" : {
+      "non_null" : "783537",
+      "largest" : "999999.0",
+      "null" : "341348",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "146212"
+      }, {
+        "item" : "0.0",
+        "count" : "51331"
+      }, {
+        "item" : "10000.0",
+        "count" : "23961"
+      }, {
+        "item" : "5000.0",
+        "count" : "23940"
+      }, {
+        "item" : "20000.0",
+        "count" : "18315"
+      }, {
+        "item" : "15000.0",
+        "count" : "18209"
+      }, {
+        "item" : "3000.0",
+        "count" : "13273"
+      }, {
+        "item" : "2000.0",
+        "count" : "13035"
+      }, {
+        "item" : "30000.0",
+        "count" : "12940"
+      }, {
+        "item" : "25000.0",
+        "count" : "12865"
+      }, {
+        "item" : "1000.0",
+        "count" : "12011"
+      }, {
+        "item" : "8000.0",
+        "count" : "11766"
+      }, {
+        "item" : "12000.0",
+        "count" : "10557"
+      }, {
+        "item" : "50000.0",
+        "count" : "10307"
+      }, {
+        "item" : "6000.0",
+        "count" : "10161"
+      }, {
+        "item" : "4000.0",
+        "count" : "9939"
+      }, {
+        "item" : "40000.0",
+        "count" : "8891"
+      }, {
+        "item" : "2500.0",
+        "count" : "7933"
+      }, {
+        "item" : "500.0",
+        "count" : "7491"
+      }, {
+        "item" : "1500.0",
+        "count" : "7343"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1124885",
+      "cardinality" : "38422"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594447,
+    "name" : "Existing Use",
+    "dataTypeName" : "text",
+    "description" : "Existing Use",
+    "fieldName" : "existing_use",
+    "position" : 27,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679872,
+    "cachedContents" : {
+      "non_null" : "974753",
+      "largest" : "workshop residential",
+      "null" : "150132",
+      "top" : [ {
+        "item" : "1 family dwelling",
+        "count" : "382431"
+      }, {
+        "item" : "apartments",
+        "count" : "187648"
+      }, {
+        "item" : "office",
+        "count" : "141979"
+      }, {
+        "item" : "2 family dwelling",
+        "count" : "121039"
+      }, {
+        "item" : "retail sales",
+        "count" : "42715"
+      }, {
+        "item" : "food/beverage hndlng",
+        "count" : "27786"
+      }, {
+        "item" : "tourist hotel/motel",
+        "count" : "8109"
+      }, {
+        "item" : "warehouse,no frnitur",
+        "count" : "5196"
+      }, {
+        "item" : "not applicable",
+        "count" : "4785"
+      }, {
+        "item" : "school",
+        "count" : "3721"
+      }, {
+        "item" : "vacant lot",
+        "count" : "3688"
+      }, {
+        "item" : "residential hotel",
+        "count" : "3527"
+      }, {
+        "item" : "church",
+        "count" : "3131"
+      }, {
+        "item" : "lending institution",
+        "count" : "3044"
+      }, {
+        "item" : "artist live/work",
+        "count" : "2595"
+      }, {
+        "item" : "auto repairs",
+        "count" : "2351"
+      }, {
+        "item" : "clinics-medic/dental",
+        "count" : "2161"
+      }, {
+        "item" : "filling/service stn",
+        "count" : "2120"
+      }, {
+        "item" : "manufacturing",
+        "count" : "1908"
+      }, {
+        "item" : "prkng garage/private",
+        "count" : "1771"
+      } ],
+      "smallest" : "1 family dwelling",
+      "count" : "1124885",
+      "cardinality" : "99"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594448,
+    "name" : "Existing Units",
+    "dataTypeName" : "text",
+    "description" : "Existing number of units on site",
+    "fieldName" : "existing_units",
+    "position" : 28,
+    "renderTypeName" : "text",
+    "tableColumnId" : 156543629,
+    "cachedContents" : {
+      "non_null" : "900809",
+      "largest" : "9999.0",
+      "null" : "224076",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "334032"
+      }, {
+        "item" : "0.0",
+        "count" : "235578"
+      }, {
+        "item" : "2.0",
+        "count" : "114558"
+      }, {
+        "item" : "3.0",
+        "count" : "41867"
+      }, {
+        "item" : "4.0",
+        "count" : "27003"
+      }, {
+        "item" : "6.0",
+        "count" : "21882"
+      }, {
+        "item" : "12.0",
+        "count" : "10723"
+      }, {
+        "item" : "5.0",
+        "count" : "8681"
+      }, {
+        "item" : "8.0",
+        "count" : "7367"
+      }, {
+        "item" : "7.0",
+        "count" : "4704"
+      }, {
+        "item" : "9.0",
+        "count" : "4578"
+      }, {
+        "item" : "10.0",
+        "count" : "3747"
+      }, {
+        "item" : "15.0",
+        "count" : "3445"
+      }, {
+        "item" : "24.0",
+        "count" : "3306"
+      }, {
+        "item" : "18.0",
+        "count" : "3021"
+      }, {
+        "item" : "16.0",
+        "count" : "2809"
+      }, {
+        "item" : "14.0",
+        "count" : "2762"
+      }, {
+        "item" : "20.0",
+        "count" : "2387"
+      }, {
+        "item" : "11.0",
+        "count" : "2080"
+      }, {
+        "item" : "30.0",
+        "count" : "1877"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1124885",
+      "cardinality" : "627"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594449,
+    "name" : "Proposed Use",
+    "dataTypeName" : "text",
+    "description" : "Proposed use",
+    "fieldName" : "proposed_use",
+    "position" : 29,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679857,
+    "cachedContents" : {
+      "non_null" : "964513",
+      "largest" : "workshop residential",
+      "null" : "160372",
+      "top" : [ {
+        "item" : "1 family dwelling",
+        "count" : "381964"
+      }, {
+        "item" : "apartments",
+        "count" : "193861"
+      }, {
+        "item" : "office",
+        "count" : "138732"
+      }, {
+        "item" : "2 family dwelling",
+        "count" : "126478"
+      }, {
+        "item" : "retail sales",
+        "count" : "34500"
+      }, {
+        "item" : "food/beverage hndlng",
+        "count" : "27515"
+      }, {
+        "item" : "tourist hotel/motel",
+        "count" : "7739"
+      }, {
+        "item" : "warehouse,no frnitur",
+        "count" : "4444"
+      }, {
+        "item" : "school",
+        "count" : "3922"
+      }, {
+        "item" : "residential hotel",
+        "count" : "3490"
+      }, {
+        "item" : "church",
+        "count" : "3002"
+      }, {
+        "item" : "artist live/work",
+        "count" : "2943"
+      }, {
+        "item" : "clinics-medic/dental",
+        "count" : "2385"
+      }, {
+        "item" : "auto repairs",
+        "count" : "1976"
+      }, {
+        "item" : "lending institution",
+        "count" : "1932"
+      }, {
+        "item" : "manufacturing",
+        "count" : "1731"
+      }, {
+        "item" : "prkng garage/private",
+        "count" : "1447"
+      }, {
+        "item" : "health studios & gym",
+        "count" : "1369"
+      }, {
+        "item" : "barber/beauty salon",
+        "count" : "1369"
+      }, {
+        "item" : "prkng garage/public",
+        "count" : "1256"
+      } ],
+      "smallest" : "1 family dwelling",
+      "count" : "1124885",
+      "cardinality" : "99"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594450,
+    "name" : "Proposed Units",
+    "dataTypeName" : "text",
+    "description" : "Proposed number of units on site (after construction)",
+    "fieldName" : "proposed_units",
+    "position" : 30,
+    "renderTypeName" : "text",
+    "tableColumnId" : 156543628,
+    "cachedContents" : {
+      "non_null" : "912514",
+      "largest" : "9999.0",
+      "null" : "212371",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "335918"
+      }, {
+        "item" : "0.0",
+        "count" : "231196"
+      }, {
+        "item" : "2.0",
+        "count" : "120727"
+      }, {
+        "item" : "3.0",
+        "count" : "44423"
+      }, {
+        "item" : "4.0",
+        "count" : "27608"
+      }, {
+        "item" : "6.0",
+        "count" : "21875"
+      }, {
+        "item" : "12.0",
+        "count" : "10745"
+      }, {
+        "item" : "5.0",
+        "count" : "8881"
+      }, {
+        "item" : "8.0",
+        "count" : "7626"
+      }, {
+        "item" : "7.0",
+        "count" : "4976"
+      }, {
+        "item" : "9.0",
+        "count" : "4801"
+      }, {
+        "item" : "10.0",
+        "count" : "3945"
+      }, {
+        "item" : "15.0",
+        "count" : "3601"
+      }, {
+        "item" : "24.0",
+        "count" : "3322"
+      }, {
+        "item" : "18.0",
+        "count" : "3072"
+      }, {
+        "item" : "14.0",
+        "count" : "2931"
+      }, {
+        "item" : "16.0",
+        "count" : "2905"
+      }, {
+        "item" : "20.0",
+        "count" : "2508"
+      }, {
+        "item" : "11.0",
+        "count" : "2192"
+      }, {
+        "item" : "30.0",
+        "count" : "1916"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1124885",
+      "cardinality" : "637"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594451,
+    "name" : "Plansets",
+    "dataTypeName" : "text",
+    "description" : "Number of plan copies/ \"plansets\" submitted with application)",
+    "fieldName" : "plansets",
+    "position" : 31,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679831,
+    "cachedContents" : {
+      "non_null" : "1009837",
+      "largest" : "9",
+      "null" : "115048",
+      "top" : [ {
+        "item" : "2",
+        "count" : "527805"
+      }, {
+        "item" : "0",
+        "count" : "477355"
+      }, {
+        "item" : "3",
+        "count" : "1638"
+      }, {
+        "item" : "4",
+        "count" : "1514"
+      }, {
+        "item" : "1",
+        "count" : "917"
+      }, {
+        "item" : "8",
+        "count" : "275"
+      }, {
+        "item" : "5",
+        "count" : "125"
+      }, {
+        "item" : "6",
+        "count" : "121"
+      }, {
+        "item" : "7",
+        "count" : "41"
+      }, {
+        "item" : "9",
+        "count" : "20"
+      }, {
+        "item" : "00",
+        "count" : "15"
+      }, {
+        "item" : "20",
+        "count" : "8"
+      }, {
+        "item" : "02",
+        "count" : "1"
+      }, {
+        "item" : "0.",
+        "count" : "1"
+      }, {
+        "item" : ".0",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "1124885",
+      "cardinality" : "15"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594452,
+    "name" : "TIDF Compliance",
+    "dataTypeName" : "text",
+    "description" : "Permit is required to pay the Transit Impact Development Fee. This fee is based on the square footage of commercial space being developed.",
+    "fieldName" : "tidf_compliance",
+    "position" : 32,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679873,
+    "cachedContents" : {
+      "non_null" : "664",
+      "largest" : "Y",
+      "null" : "1124221",
+      "top" : [ {
+        "item" : "Y",
+        "count" : "464"
+      }, {
+        "item" : "R",
+        "count" : "130"
+      }, {
+        "item" : "P",
+        "count" : "69"
+      }, {
+        "item" : "E",
+        "count" : "1"
+      } ],
+      "smallest" : "E",
+      "count" : "1124885",
+      "cardinality" : "4"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594453,
+    "name" : "Existing Occupancy",
+    "dataTypeName" : "text",
+    "description" : "Existing building occupancy code or codes",
+    "fieldName" : "existing_occupancy",
+    "position" : 33,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679840,
+    "cachedContents" : {
+      "non_null" : "969674",
+      "largest" : "U,S-2,R-2",
+      "null" : "155211",
+      "top" : [ {
+        "item" : "R-3",
+        "count" : "498371"
+      }, {
+        "item" : "B",
+        "count" : "99271"
+      }, {
+        "item" : "R-1",
+        "count" : "89192"
+      }, {
+        "item" : "R-2",
+        "count" : "88763"
+      }, {
+        "item" : "B-2",
+        "count" : "41910"
+      }, {
+        "item" : "M",
+        "count" : "14072"
+      }, {
+        "item" : "B,M",
+        "count" : "12333"
+      }, {
+        "item" : "A-3",
+        "count" : "5664"
+      }, {
+        "item" : "M,B",
+        "count" : "5337"
+      }, {
+        "item" : "R-2,B",
+        "count" : "4478"
+      }, {
+        "item" : "B,R-2",
+        "count" : "3680"
+      }, {
+        "item" : "B,R-3",
+        "count" : "3511"
+      }, {
+        "item" : "R-2,M",
+        "count" : "3371"
+      }, {
+        "item" : "R-3,B",
+        "count" : "3206"
+      }, {
+        "item" : "R-1,B",
+        "count" : "2984"
+      }, {
+        "item" : "R-1,B-2",
+        "count" : "2885"
+      }, {
+        "item" : "B-2,R-1",
+        "count" : "2761"
+      }, {
+        "item" : "B,M,S-2",
+        "count" : "2758"
+      }, {
+        "item" : "B,R-1",
+        "count" : "2610"
+      }, {
+        "item" : "S-2",
+        "count" : "2519"
+      } ],
+      "smallest" : "....",
+      "count" : "1124885",
+      "cardinality" : "4064"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594454,
+    "name" : "Proposed Occupancy",
+    "dataTypeName" : "text",
+    "description" : "Proposed building occupancy code or codes",
+    "fieldName" : "proposed_occupancy",
+    "position" : 34,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679829,
+    "cachedContents" : {
+      "non_null" : "976097",
+      "largest" : "U,S-2,R-2",
+      "null" : "148788",
+      "top" : [ {
+        "item" : "R-3",
+        "count" : "504508"
+      }, {
+        "item" : "B",
+        "count" : "95025"
+      }, {
+        "item" : "R-2",
+        "count" : "90889"
+      }, {
+        "item" : "R-1",
+        "count" : "89999"
+      }, {
+        "item" : "B-2",
+        "count" : "41878"
+      }, {
+        "item" : "B,M",
+        "count" : "11566"
+      }, {
+        "item" : "M",
+        "count" : "9772"
+      }, {
+        "item" : "A-3",
+        "count" : "5757"
+      }, {
+        "item" : "M,B",
+        "count" : "4938"
+      }, {
+        "item" : "R-2,B",
+        "count" : "4588"
+      }, {
+        "item" : "B,R-2",
+        "count" : "3719"
+      }, {
+        "item" : "B,R-3",
+        "count" : "3505"
+      }, {
+        "item" : "R-2,M",
+        "count" : "3405"
+      }, {
+        "item" : "R-3,B",
+        "count" : "3210"
+      }, {
+        "item" : "R-1,B-2",
+        "count" : "3102"
+      }, {
+        "item" : "R-1,B",
+        "count" : "3048"
+      }, {
+        "item" : "B-2,R-1",
+        "count" : "2876"
+      }, {
+        "item" : "B,M,S-2",
+        "count" : "2753"
+      }, {
+        "item" : "I",
+        "count" : "2740"
+      }, {
+        "item" : "B,R-1",
+        "count" : "2616"
+      } ],
+      "smallest" : "....",
+      "count" : "1124885",
+      "cardinality" : "4744"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594455,
+    "name" : "Existing Construction Type",
+    "dataTypeName" : "text",
+    "description" : "Existing Construction Type. See full definitions here: https://sf.gov/information/building-construction-type-definitions",
+    "fieldName" : "existing_construction_type",
+    "position" : 35,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679825,
+    "cachedContents" : {
+      "non_null" : "883790",
+      "largest" : "V",
+      "null" : "241095",
+      "top" : [ {
+        "item" : "5",
+        "count" : "648917"
+      }, {
+        "item" : "1",
+        "count" : "148455"
+      }, {
+        "item" : "3",
+        "count" : "55587"
+      }, {
+        "item" : "2",
+        "count" : "27146"
+      }, {
+        "item" : "4",
+        "count" : "3675"
+      }, {
+        "item" : "V",
+        "count" : "10"
+      } ],
+      "smallest" : "1",
+      "count" : "1124885",
+      "cardinality" : "6"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594456,
+    "name" : "Existing Construction Type Description",
+    "dataTypeName" : "text",
+    "description" : "Existing Construction Type description. See full definitions here: https://sf.gov/information/building-construction-type-definitions",
+    "fieldName" : "existing_construction_type_description",
+    "position" : 36,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679881,
+    "cachedContents" : {
+      "non_null" : "883780",
+      "largest" : "wood frame (5)",
+      "null" : "241105",
+      "top" : [ {
+        "item" : "wood frame (5)",
+        "count" : "648917"
+      }, {
+        "item" : "constr type 1",
+        "count" : "148455"
+      }, {
+        "item" : "constr type 3",
+        "count" : "55587"
+      }, {
+        "item" : "constr type 2",
+        "count" : "27146"
+      }, {
+        "item" : "constr type 4",
+        "count" : "3675"
+      } ],
+      "smallest" : "constr type 1",
+      "count" : "1124885",
+      "cardinality" : "5"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594457,
+    "name" : "Proposed Construction Type",
+    "dataTypeName" : "text",
+    "description" : "Proposed Construction Type. See full definitions here: https://sf.gov/information/building-construction-type-definitions",
+    "fieldName" : "proposed_construction_type",
+    "position" : 37,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679865,
+    "cachedContents" : {
+      "non_null" : "879581",
+      "largest" : "V",
+      "null" : "245304",
+      "top" : [ {
+        "item" : "5",
+        "count" : "652151"
+      }, {
+        "item" : "1",
+        "count" : "145909"
+      }, {
+        "item" : "3",
+        "count" : "52777"
+      }, {
+        "item" : "2",
+        "count" : "25188"
+      }, {
+        "item" : "4",
+        "count" : "3405"
+      }, {
+        "item" : "I",
+        "count" : "86"
+      }, {
+        "item" : "H",
+        "count" : "33"
+      }, {
+        "item" : "F",
+        "count" : "20"
+      }, {
+        "item" : "V",
+        "count" : "10"
+      }, {
+        "item" : "III",
+        "count" : "1"
+      }, {
+        "item" : "B",
+        "count" : "1"
+      } ],
+      "smallest" : "1",
+      "count" : "1124885",
+      "cardinality" : "11"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594458,
+    "name" : "Proposed Construction Type Description",
+    "dataTypeName" : "text",
+    "description" : "Proposed Construction Type description. See full definitions here: https://sf.gov/information/building-construction-type-definitions",
+    "fieldName" : "proposed_construction_type_description",
+    "position" : 38,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679827,
+    "cachedContents" : {
+      "non_null" : "879430",
+      "largest" : "wood frame (5)",
+      "null" : "245455",
+      "top" : [ {
+        "item" : "wood frame (5)",
+        "count" : "652151"
+      }, {
+        "item" : "constr type 1",
+        "count" : "145909"
+      }, {
+        "item" : "constr type 3",
+        "count" : "52777"
+      }, {
+        "item" : "constr type 2",
+        "count" : "25188"
+      }, {
+        "item" : "constr type 4",
+        "count" : "3405"
+      } ],
+      "smallest" : "constr type 1",
+      "count" : "1124885",
+      "cardinality" : "5"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594459,
+    "name" : "Site Permit",
+    "dataTypeName" : "text",
+    "description" : "Site Permit",
+    "fieldName" : "site_permit",
+    "position" : 39,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679880,
+    "cachedContents" : {
+      "non_null" : "26072",
+      "largest" : "Y",
+      "null" : "1098813",
+      "top" : [ {
+        "item" : "Y",
+        "count" : "26072"
+      } ],
+      "smallest" : "Y",
+      "count" : "1124885",
+      "cardinality" : "1"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594460,
+    "name" : "Last Permit Activity Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date of most recent activity on permit (or associated addenda for site permits) at any routing station.",
+    "fieldName" : "last_permit_activity_date",
+    "position" : 40,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 145721264,
+    "cachedContents" : {
+      "non_null" : "1034431",
+      "largest" : "2209-06-07T23:00:00.000",
+      "null" : "90454",
+      "top" : [ {
+        "item" : "1960-01-01T00:00:00.000",
+        "count" : "1485"
+      }, {
+        "item" : "1994-08-30T00:00:00.000",
+        "count" : "198"
+      }, {
+        "item" : "1994-06-06T00:00:00.000",
+        "count" : "188"
+      }, {
+        "item" : "1994-06-14T00:00:00.000",
+        "count" : "180"
+      }, {
+        "item" : "1997-10-06T00:00:00.000",
+        "count" : "171"
+      }, {
+        "item" : "1994-09-01T00:00:00.000",
+        "count" : "164"
+      }, {
+        "item" : "1994-08-31T00:00:00.000",
+        "count" : "164"
+      }, {
+        "item" : "1999-10-12T00:00:00.000",
+        "count" : "161"
+      }, {
+        "item" : "1997-06-30T00:00:00.000",
+        "count" : "159"
+      }, {
+        "item" : "1999-10-13T00:00:00.000",
+        "count" : "159"
+      }, {
+        "item" : "1998-06-12T00:00:00.000",
+        "count" : "158"
+      }, {
+        "item" : "1997-08-18T00:00:00.000",
+        "count" : "157"
+      }, {
+        "item" : "1994-06-15T00:00:00.000",
+        "count" : "157"
+      }, {
+        "item" : "1994-04-09T00:00:00.000",
+        "count" : "156"
+      }, {
+        "item" : "1997-10-15T00:00:00.000",
+        "count" : "155"
+      }, {
+        "item" : "1997-10-24T00:00:00.000",
+        "count" : "152"
+      }, {
+        "item" : "1996-06-18T00:00:00.000",
+        "count" : "152"
+      }, {
+        "item" : "1999-08-30T00:00:00.000",
+        "count" : "151"
+      }, {
+        "item" : "1998-11-12T00:00:00.000",
+        "count" : "151"
+      }, {
+        "item" : "1999-10-25T00:00:00.000",
+        "count" : "151"
+      } ],
+      "smallest" : "1960-01-01T00:00:00.000",
+      "count" : "1124885",
+      "cardinality" : "745869"
+    },
+    "format" : {
+      "view" : "date_ymd_time"
+    }
+  }, {
+    "id" : 615594461,
+    "name" : "Application Submission Method",
+    "dataTypeName" : "text",
+    "description" : "Indicates how the permit application was submitted to DBI, i.e. via DBI's permit web application form, SF.gov form, or in person. (Auto-generated by MIS based on other PTS data fields)",
+    "fieldName" : "application_submission_method",
+    "position" : 41,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679882,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "website",
+      "null" : "0",
+      "top" : [ {
+        "item" : "in-house",
+        "count" : "1118372"
+      }, {
+        "item" : "website",
+        "count" : "6502"
+      }, {
+        "item" : "epr website",
+        "count" : "11"
+      } ],
+      "smallest" : "epr website",
+      "count" : "1124885",
+      "cardinality" : "3"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594462,
+    "name" : "ADU",
+    "dataTypeName" : "text",
+    "description" : "NOTE - this column was deprecated on 2/1/25, use primary_priority instead.Permit for an accessory dwelling unit (ADU)",
+    "fieldName" : "adu",
+    "position" : 42,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679868,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "Y",
+      "null" : "0",
+      "top" : [ {
+        "item" : "N",
+        "count" : "1122403"
+      }, {
+        "item" : "Y",
+        "count" : "2482"
+      } ],
+      "smallest" : "N",
+      "count" : "1124885",
+      "cardinality" : "2"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594463,
+    "name" : "Primary Address Flag",
+    "dataTypeName" : "text",
+    "description" : "Indicates whether the address for the permit is the primary address identified by DBI",
+    "fieldName" : "primary_address_flag",
+    "position" : 43,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145721265,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "Y",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Y",
+        "count" : "1124885"
+      } ],
+      "smallest" : "Y",
+      "count" : "1124885",
+      "cardinality" : "1"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594464,
+    "name" : "supervisor_district",
+    "dataTypeName" : "text",
+    "description" : "Supervisor district the permit falls within",
+    "fieldName" : "supervisor_district",
+    "position" : 44,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145685227,
+    "cachedContents" : {
+      "non_null" : "1121540",
+      "largest" : "9",
+      "null" : "3345",
+      "top" : [ {
+        "item" : "3",
+        "count" : "167305"
+      }, {
+        "item" : "8",
+        "count" : "149005"
+      }, {
+        "item" : "2",
+        "count" : "127713"
+      }, {
+        "item" : "6",
+        "count" : "111071"
+      }, {
+        "item" : "7",
+        "count" : "104577"
+      }, {
+        "item" : "9",
+        "count" : "94910"
+      }, {
+        "item" : "1",
+        "count" : "87032"
+      }, {
+        "item" : "4",
+        "count" : "79142"
+      }, {
+        "item" : "5",
+        "count" : "73488"
+      }, {
+        "item" : "10",
+        "count" : "66498"
+      }, {
+        "item" : "11",
+        "count" : "60799"
+      } ],
+      "smallest" : "1",
+      "count" : "1124885",
+      "cardinality" : "11"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594465,
+    "name" : "neighborhoods_analysis_boundaries",
+    "dataTypeName" : "text",
+    "description" : "Analysis neighborhood the permit falls within",
+    "fieldName" : "neighborhoods_analysis_boundaries",
+    "position" : 45,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145685228,
+    "cachedContents" : {
+      "non_null" : "1121540",
+      "largest" : "West of Twin Peaks",
+      "null" : "3345",
+      "top" : [ {
+        "item" : "Financial District/South Beach",
+        "count" : "123044"
+      }, {
+        "item" : "Sunset/Parkside",
+        "count" : "78596"
+      }, {
+        "item" : "Mission",
+        "count" : "69060"
+      }, {
+        "item" : "West of Twin Peaks",
+        "count" : "66483"
+      }, {
+        "item" : "Outer Richmond",
+        "count" : "47783"
+      }, {
+        "item" : "Pacific Heights",
+        "count" : "45783"
+      }, {
+        "item" : "Marina",
+        "count" : "45429"
+      }, {
+        "item" : "Noe Valley",
+        "count" : "44872"
+      }, {
+        "item" : "Castro/Upper Market",
+        "count" : "44130"
+      }, {
+        "item" : "South of Market",
+        "count" : "36539"
+      }, {
+        "item" : "Inner Sunset",
+        "count" : "35873"
+      }, {
+        "item" : "Bernal Heights",
+        "count" : "35109"
+      }, {
+        "item" : "Bayview Hunters Point",
+        "count" : "32624"
+      }, {
+        "item" : "Haight Ashbury",
+        "count" : "30170"
+      }, {
+        "item" : "Nob Hill",
+        "count" : "28540"
+      }, {
+        "item" : "Russian Hill",
+        "count" : "26977"
+      }, {
+        "item" : "Inner Richmond",
+        "count" : "26407"
+      }, {
+        "item" : "Excelsior",
+        "count" : "25702"
+      }, {
+        "item" : "Presidio Heights",
+        "count" : "23370"
+      }, {
+        "item" : "Hayes Valley",
+        "count" : "23308"
+      } ],
+      "smallest" : "Bayview Hunters Point",
+      "count" : "1124885",
+      "cardinality" : "41"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594466,
+    "name" : "Zipcode",
+    "dataTypeName" : "text",
+    "description" : "Zip code the permit falls within",
+    "fieldName" : "zipcode",
+    "position" : 46,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679836,
+    "cachedContents" : {
+      "non_null" : "1124678",
+      "largest" : "94965",
+      "null" : "207",
+      "top" : [ {
+        "item" : "94110",
+        "count" : "89251"
+      }, {
+        "item" : "94114",
+        "count" : "70364"
+      }, {
+        "item" : "94112",
+        "count" : "61849"
+      }, {
+        "item" : "94122",
+        "count" : "60780"
+      }, {
+        "item" : "94117",
+        "count" : "59690"
+      }, {
+        "item" : "94118",
+        "count" : "58362"
+      }, {
+        "item" : "94109",
+        "count" : "56313"
+      }, {
+        "item" : "94103",
+        "count" : "52843"
+      }, {
+        "item" : "94123",
+        "count" : "51869"
+      }, {
+        "item" : "94115",
+        "count" : "51401"
+      }, {
+        "item" : "94116",
+        "count" : "50474"
+      }, {
+        "item" : "94121",
+        "count" : "48531"
+      }, {
+        "item" : "94131",
+        "count" : "46723"
+      }, {
+        "item" : "94105",
+        "count" : "44516"
+      }, {
+        "item" : "94107",
+        "count" : "42307"
+      }, {
+        "item" : "94127",
+        "count" : "38106"
+      }, {
+        "item" : "94133",
+        "count" : "37384"
+      }, {
+        "item" : "94102",
+        "count" : "33259"
+      }, {
+        "item" : "94111",
+        "count" : "32706"
+      }, {
+        "item" : "94108",
+        "count" : "30898"
+      } ],
+      "smallest" : "94080",
+      "count" : "1124885",
+      "cardinality" : "30"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594467,
+    "name" : "Location",
+    "dataTypeName" : "point",
+    "description" : "The latitude and longitude associated with the permit (based on block and lot, i.e. APN)",
+    "fieldName" : "location",
+    "position" : 47,
+    "renderTypeName" : "point",
+    "tableColumnId" : 145679874,
+    "cachedContents" : {
+      "non_null" : "1121540",
+      "null" : "3345",
+      "top" : [ {
+        "item" : {
+          "coordinates" : [ -122.394985937, 37.793983856 ],
+          "type" : "Point"
+        },
+        "count" : "3043"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.403518141, 37.792579585 ],
+          "type" : "Point"
+        },
+        "count" : "2073"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.398031557, 37.793040109 ],
+          "type" : "Point"
+        },
+        "count" : "2036"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.476825757, 37.728470603 ],
+          "type" : "Point"
+        },
+        "count" : "1803"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.399644299, 37.794643849 ],
+          "type" : "Point"
+        },
+        "count" : "1644"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.401766913, 37.789807668 ],
+          "type" : "Point"
+        },
+        "count" : "1506"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.407158343, 37.783946923 ],
+          "type" : "Point"
+        },
+        "count" : "1428"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.399325506, 37.790631414 ],
+          "type" : "Point"
+        },
+        "count" : "1410"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.397298121, 37.79494826 ],
+          "type" : "Point"
+        },
+        "count" : "1381"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.40614459, 37.784100395 ],
+          "type" : "Point"
+        },
+        "count" : "1345"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.398472752, 37.794798594 ],
+          "type" : "Point"
+        },
+        "count" : "1331"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.392120114, 37.776584792 ],
+          "type" : "Point"
+        },
+        "count" : "1259"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.397347692, 37.794053198 ],
+          "type" : "Point"
+        },
+        "count" : "1209"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.398125294, 37.791121296 ],
+          "type" : "Point"
+        },
+        "count" : "1167"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.400946615, 37.789344634 ],
+          "type" : "Point"
+        },
+        "count" : "1144"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.399226774, 37.795606965 ],
+          "type" : "Point"
+        },
+        "count" : "1116"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.397365063, 37.790304386 ],
+          "type" : "Point"
+        },
+        "count" : "1063"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.400940441, 37.790485159 ],
+          "type" : "Point"
+        },
+        "count" : "1061"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.395565947, 37.785291763 ],
+          "type" : "Point"
+        },
+        "count" : "1021"
+      }, {
+        "item" : {
+          "coordinates" : [ -122.400521253, 37.793009466 ],
+          "type" : "Point"
+        },
+        "count" : "972"
+      } ],
+      "count" : "1124885",
+      "cardinality" : "153094"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594468,
+    "name" : "point_source",
+    "dataTypeName" : "text",
+    "description" : "Data source for the coordinate point data, i.e. parcel centroid or EAS Address point.",
+    "fieldName" : "point_source",
+    "position" : 48,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145910797,
+    "cachedContents" : {
+      "non_null" : "1121540",
+      "largest" : "parcel_centroid",
+      "null" : "3345",
+      "top" : [ {
+        "item" : "eas_address_point",
+        "count" : "1106949"
+      }, {
+        "item" : "parcel_centroid",
+        "count" : "14591"
+      } ],
+      "smallest" : "eas_address_point",
+      "count" : "1124885",
+      "cardinality" : "2"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594469,
+    "name" : "Record ID",
+    "dataTypeName" : "text",
+    "description" : "Unique ID created from concatenating P_ADDR_ID & AVS_ADDRESSES_ID",
+    "fieldName" : "record_id",
+    "position" : 49,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145679885,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "999999174749",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1562719113715",
+        "count" : "1"
+      }, {
+        "item" : "1665216472406",
+        "count" : "1"
+      }, {
+        "item" : "496213150689",
+        "count" : "1"
+      }, {
+        "item" : "836386249544",
+        "count" : "1"
+      }, {
+        "item" : "101546199872",
+        "count" : "1"
+      }, {
+        "item" : "1209244226878",
+        "count" : "1"
+      }, {
+        "item" : "1618226377549",
+        "count" : "1"
+      }, {
+        "item" : "1304994374477",
+        "count" : "1"
+      }, {
+        "item" : "88480145294",
+        "count" : "1"
+      }, {
+        "item" : "1715855202513",
+        "count" : "1"
+      }, {
+        "item" : "1097088163058",
+        "count" : "1"
+      }, {
+        "item" : "88139245998",
+        "count" : "1"
+      }, {
+        "item" : "14190069313",
+        "count" : "1"
+      }, {
+        "item" : "793302374910",
+        "count" : "1"
+      }, {
+        "item" : "1660240506497",
+        "count" : "1"
+      }, {
+        "item" : "1036370156075",
+        "count" : "1"
+      }, {
+        "item" : "101544666079",
+        "count" : "1"
+      }, {
+        "item" : "831159155180",
+        "count" : "1"
+      }, {
+        "item" : "896346141114",
+        "count" : "1"
+      }, {
+        "item" : "1158332231766",
+        "count" : "1"
+      } ],
+      "smallest" : "1000000164376",
+      "count" : "1124885",
+      "cardinality" : "1124885"
+    },
+    "format" : { }
+  }, {
+    "id" : 615594470,
+    "name" : "data_as_of",
+    "dataTypeName" : "calendar_date",
+    "description" : "Timestamp when the record (row) was last updated in the source system",
+    "fieldName" : "data_as_of",
+    "position" : 50,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 145679864,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "2025-08-07T23:55:01.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025-08-07T23:55:01.000",
+        "count" : "1124885"
+      } ],
+      "smallest" : "2025-08-07T23:55:01.000",
+      "count" : "1124885",
+      "cardinality" : "1"
+    },
+    "format" : {
+      "view" : "date_ymd_time"
+    }
+  }, {
+    "id" : 615594471,
+    "name" : "data_loaded_at",
+    "dataTypeName" : "calendar_date",
+    "description" : "Timestamp when the record (row) was was last updated/ loaded into DataSF data portal",
+    "fieldName" : "data_loaded_at",
+    "position" : 51,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 145679853,
+    "cachedContents" : {
+      "non_null" : "1124885",
+      "largest" : "2025-08-08T03:30:43.448",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025-08-08T03:30:43.448",
+        "count" : "1124885"
+      } ],
+      "smallest" : "2025-08-08T03:30:43.448",
+      "count" : "1124885",
+      "cardinality" : "1"
+    },
+    "format" : {
+      "view" : "date_ymd_time"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "Open Data Commons Public Domain Dedication and License",
+    "termsLink" : "http://opendatacommons.org/licenses/pddl/1.0/"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Department Metrics" : {
+        "Publishing Department" : "Building Inspection"
+      },
+      "Publishing Details" : {
+        "Data change frequency" : "Daily",
+        "Publishing frequency" : "Daily"
+      }
+    },
+    "rowLabel" : "Permit",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "dbag-6qd9",
+    "displayName" : "OpenData",
+    "screenName" : "OpenData",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "dbag-6qd9",
+    "displayName" : "OpenData",
+    "screenName" : "OpenData",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "permits", "permit", "construction permits", "building", "building safety", "housing" ],
+  "flags" : [ "calculatedView", "federated", "internalToPublicFederatedView", "ownerMayBeContacted", "restorable", "restorePossibleForType", "soqlBasedView" ]
+}

@@ -1,0 +1,98 @@
+{
+  "README.txt": {
+    "sha256": "b12d5faf7d9a4a6c1b2699ded92973e67069ca0367c1b82843568ca09cbd7bd1",
+    "bytes": 5093
+  },
+  "code/prepare_dataset.py": {
+    "sha256": "ff5be26152f2dda18782de396b33bbe2399533b77d6bfafa7fe6be4302071518",
+    "bytes": 4614
+  },
+  "code/requirements.txt": {
+    "sha256": "faeb826d7cfaecff11bde4aef44cf68dcf9ec510b08efc733e8ffc6bacab3b83",
+    "bytes": 24
+  },
+  "data/construction_permits_ssot.csv.gz": {
+    "sha256": "72b0f94f86f3db6b8419df3be265e6e7b9390c62fb9e8a157ed299bc9b5705ad",
+    "bytes": 28415711
+  },
+  "figures/median_by_permit_type.png": {
+    "sha256": "a309993b7a3e1c799f9781af24e95007e4249b8ed63860a1a1a38e45d83610c7",
+    "bytes": 87943
+  },
+  "figures/volume_and_timeline.png": {
+    "sha256": "bc55f611e7f2eb79b8398ed31ca6d9db61820656cffe42729da81bd7efccdd33",
+    "bytes": 62467
+  },
+  "metadata/assessor_meta.json": {
+    "sha256": "e67785e411f40e4f733b9957fa4b4c9be380228227a3c1693feee4c0de923d6f",
+    "bytes": 88676
+  },
+  "metadata/audit_by_permit_type.csv": {
+    "sha256": "30340834f1f958579707b38a630c9ce136ada08b0cf5022c4841b2776f26729e",
+    "bytes": 421
+  },
+  "metadata/audit_by_year.csv": {
+    "sha256": "5cd5626e198d629deb210d69b3ddf1712430fda55fbc4c538f0efa3b6e5e8819",
+    "bytes": 426
+  },
+  "metadata/data_audit.json": {
+    "sha256": "221ba35a14bc2425c76ee0848e5e20a8392a3180e001a2758bbf3a98dc95a497",
+    "bytes": 1894
+  },
+  "metadata/data_dictionary.csv": {
+    "sha256": "d69713bda11239ca36ec3d5a23de69ef171fd64a51fa9a226683e7980e287d4c",
+    "bytes": 16870
+  },
+  "metadata/missingness.csv": {
+    "sha256": "a15e672390dd83b6ad7911001325ea4a12d88d3944e5e9fe5928ef6d8c596bf7",
+    "bytes": 3172
+  },
+  "metadata/permit_year_counts.json": {
+    "sha256": "8f34e7be682af69a4879c704c0872c24c084e4ef63b2142dcbbdb837982909b0",
+    "bytes": 283
+  },
+  "metadata/roll_year_counts.json": {
+    "sha256": "8503928197d8bc512a7a6a9de985435dd433e50e72c24129c807ae641784b9d4",
+    "bytes": 428
+  },
+  "metadata/sf_metadata.json": {
+    "sha256": "3c7dd12b7f78e7ed44ac52def22c4af3e59856c85ea8044a4cf1fbcd494eabab",
+    "bytes": 26083
+  },
+  "metadata/sf_primary_meta.json": {
+    "sha256": "a78005721024f8da1cb55edd4c1b290291de703d97cc358837b3dfcd1bfe1299",
+    "bytes": 87162
+  },
+  "metadata/source_download_manifest.json": {
+    "sha256": "8b33295f6cdfb4ee8b1dc020f621a2ff793338bdcda6417f971bb350af891a13",
+    "bytes": 13389
+  },
+  "raw/official_assessor_matching_rows_2017_2022.csv.gz": {
+    "sha256": "1f56e57edef2a750054c0cd24b08fca1491a03b68bd3f3f944699d3565e5d366",
+    "bytes": 1848162
+  },
+  "raw/official_bls_cpi_2019_2024.csv": {
+    "sha256": "f49a2b2003f74bf929b0db4b27333cd80431c16345c2abac6d3557301195fcae",
+    "bytes": 2060
+  },
+  "raw/official_bls_response.json": {
+    "sha256": "40c463bc04b5399f5eb7aaddba1bc0c6c19b9286489ba21827bd82c226c8a8e5",
+    "bytes": 6471
+  },
+  "raw/official_permits_2019_2024.csv.gz": {
+    "sha256": "f29c26c04ba2dbe28b244310639753704de2a8be5465dbfe7e44fe32d7a9eb58",
+    "bytes": 19864405
+  },
+  "reports/ADS_Construction_Pre_Submission.docx": {
+    "sha256": "19dc487fcefa9d3bd5be62e12b9cee52678a871aab2b0b3d8410f5f78182bc64",
+    "bytes": 39211
+  },
+  "reports/ADS_Construction_Pre_Submission.pdf": {
+    "sha256": "ddc23c12e7adc94d63e934a82f769402a62d9c475e35dd2bd9924cba80c52cdb",
+    "bytes": 71071
+  },
+  "reports/ADS_Construction_Research_Guide.pdf": {
+    "sha256": "55bdd49bee678d6c68be098cca458a7a2d59432eaa14fbfad44f3ce49dfbcbb2",
+    "bytes": 214379
+  }
+}

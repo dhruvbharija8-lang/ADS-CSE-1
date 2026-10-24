@@ -1,0 +1,9 @@
+permit_type,permit_type_definition,valid_issued,median_days,p90_days
+1,new construction,108,528.5,1235.8999999999999
+2,new construction wood frame,221,620.0,1302.0
+3,additions alterations or repairs,6832,278.0,830.0
+4,sign - erect,2261,19.0,167.0
+5,grade or quarry or fill or excavate,34,148.5,570.6999999999999
+6,demolitions,316,157.0,1009.0
+7,wall or painted sign,320,9.0,135.0
+8,otc alterations permit,133108,0.0,61.0

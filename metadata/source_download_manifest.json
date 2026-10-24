@@ -1,0 +1,100 @@
+[
+  {
+    "extract_file": "assessor_2017.csv",
+    "url": "https://data.sfgov.org/resource/wv5m-vpq2.csv?%24select=closed_roll_year%2Cparcel_number%2Cblock%2Clot%2Cuse_code%2Cuse_definition%2Cproperty_class_code%2Cproperty_class_code_definition%2Cyear_property_built%2Cnumber_of_stories%2Cnumber_of_units%2Czoning_code%2Cconstruction_type%2Cproperty_area%2Clot_area%2Crow_id%2Cdata_as_of%2Cdata_loaded_at&%24where=closed_roll_year%3D2017&%24order=parcel_number&%24limit=300000",
+    "retrieved_at_utc": "2026-10-22T20:12:53.848486+00:00",
+    "bytes": 40623198,
+    "sha256": "fefe10db9acf9eb961f57eb38d7a629e8f6b576652fbff5f67dc833762689ed5"
+  },
+  {
+    "extract_file": "assessor_2018.csv",
+    "url": "https://data.sfgov.org/resource/wv5m-vpq2.csv?%24select=closed_roll_year%2Cparcel_number%2Cblock%2Clot%2Cuse_code%2Cuse_definition%2Cproperty_class_code%2Cproperty_class_code_definition%2Cyear_property_built%2Cnumber_of_stories%2Cnumber_of_units%2Czoning_code%2Cconstruction_type%2Cproperty_area%2Clot_area%2Crow_id%2Cdata_as_of%2Cdata_loaded_at&%24where=closed_roll_year%3D2018&%24order=parcel_number&%24limit=300000",
+    "retrieved_at_utc": "2026-10-22T20:12:51.975716+00:00",
+    "bytes": 41511885,
+    "sha256": "ee794c52c8534920781e47714dd8aaef709606b59e8622c5f3ef74e26f4cc0d2"
+  },
+  {
+    "extract_file": "assessor_2019.csv",
+    "url": "https://data.sfgov.org/resource/wv5m-vpq2.csv?%24select=closed_roll_year%2Cparcel_number%2Cblock%2Clot%2Cuse_code%2Cuse_definition%2Cproperty_class_code%2Cproperty_class_code_definition%2Cyear_property_built%2Cnumber_of_stories%2Cnumber_of_units%2Czoning_code%2Cconstruction_type%2Cproperty_area%2Clot_area%2Crow_id%2Cdata_as_of%2Cdata_loaded_at&%24where=closed_roll_year%3D2019&%24order=parcel_number&%24limit=300000",
+    "retrieved_at_utc": "2026-10-22T20:12:55.683934+00:00",
+    "bytes": 41654870,
+    "sha256": "a3a3c84976097509fefa51660fb6ab59e235c598485f78ce1cd1bad1237d77ec"
+  },
+  {
+    "extract_file": "assessor_2020.csv",
+    "url": "https://data.sfgov.org/resource/wv5m-vpq2.csv?%24select=closed_roll_year%2Cparcel_number%2Cblock%2Clot%2Cuse_code%2Cuse_definition%2Cproperty_class_code%2Cproperty_class_code_definition%2Cyear_property_built%2Cnumber_of_stories%2Cnumber_of_units%2Czoning_code%2Cconstruction_type%2Cproperty_area%2Clot_area%2Crow_id%2Cdata_as_of%2Cdata_loaded_at&%24where=closed_roll_year%3D2020&%24order=parcel_number&%24limit=300000",
+    "retrieved_at_utc": "2026-10-22T20:13:30.111846+00:00",
+    "bytes": 40964710,
+    "sha256": "d30620efe791f1c918881d5d88d915f49fdc6e2b9b99d4670e634cb56d30c4f0"
+  },
+  {
+    "extract_file": "assessor_2021.csv",
+    "url": "https://data.sfgov.org/resource/wv5m-vpq2.csv?%24select=closed_roll_year%2Cparcel_number%2Cblock%2Clot%2Cuse_code%2Cuse_definition%2Cproperty_class_code%2Cproperty_class_code_definition%2Cyear_property_built%2Cnumber_of_stories%2Cnumber_of_units%2Czoning_code%2Cconstruction_type%2Cproperty_area%2Clot_area%2Crow_id%2Cdata_as_of%2Cdata_loaded_at&%24where=closed_roll_year%3D2021&%24order=parcel_number&%24limit=300000",
+    "retrieved_at_utc": "2026-10-22T20:13:08.064201+00:00",
+    "bytes": 41167367,
+    "sha256": "36971a4bfdc2ed6a98041faa2f407b02f41ecd17ae586ac9ce25c43eb344c4c1"
+  },
+  {
+    "extract_file": "assessor_2022.csv",
+    "url": "https://data.sfgov.org/resource/wv5m-vpq2.csv?%24select=closed_roll_year%2Cparcel_number%2Cblock%2Clot%2Cuse_code%2Cuse_definition%2Cproperty_class_code%2Cproperty_class_code_definition%2Cyear_property_built%2Cnumber_of_stories%2Cnumber_of_units%2Czoning_code%2Cconstruction_type%2Cproperty_area%2Clot_area%2Crow_id%2Cdata_as_of%2Cdata_loaded_at&%24where=closed_roll_year%3D2022&%24order=parcel_number&%24limit=300000",
+    "retrieved_at_utc": "2026-10-22T20:13:10.168283+00:00",
+    "bytes": 41344881,
+    "sha256": "216e9deb6c263f63e8be9e71bc2a550f78a51b374a04c9562d72e8b363df30c8"
+  },
+  {
+    "extract_file": "bls_cpi_2019_2024.json",
+    "url": "https://api.bls.gov/publicAPI/v1/timeseries/data/",
+    "payload": "{\"seriesid\": [\"CUUR0000SA0\"], \"startyear\": \"2019\", \"endyear\": \"2024\"}",
+    "retrieved_at_utc": "2026-10-22T20:13:05.246740+00:00",
+    "sha256": "40c463bc04b5399f5eb7aaddba1bc0c6c19b9286489ba21827bd82c226c8a8e5",
+    "bytes": 6471
+  },
+  {
+    "extract_file": "permits_2019.csv",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.csv?%24select=permit_number%2Cpermit_type%2Cpermit_type_definition%2Cpermit_creation_date%2Cblock%2Clot%2Cstreet_number%2Cstreet_number_suffix%2Cstreet_name%2Cstreet_suffix%2Cunit%2Cunit_suffix%2Cdescription%2Cprimary_priority%2Call_priority_types%2Cstatus%2Cstatus_date%2Cfiled_date%2Cissued_date%2Ccompleted_date%2Cfirst_construction_document_date%2Capproved_date%2Cstructural_notification%2Cnumber_of_existing_stories%2Cnumber_of_proposed_stories%2Cvoluntary_soft_story_retrofit%2Cfire_only_permit%2Cestimated_cost%2Crevised_cost%2Cexisting_use%2Cexisting_units%2Cproposed_use%2Cproposed_units%2Cplansets%2Ctidf_compliance%2Cexisting_occupancy%2Cproposed_occupancy%2Cexisting_construction_type%2Cexisting_construction_type_description%2Cproposed_construction_type%2Cproposed_construction_type_description%2Csite_permit%2Clast_permit_activity_date%2Capplication_submission_method%2Cadu%2Cprimary_address_flag%2Csupervisor_district%2Cneighborhoods_analysis_boundaries%2Czipcode%2Clocation%2Cpoint_source%2Creroof%2Crecord_id%2Cdata_as_of%2Cdata_loaded_at&%24where=primary_address_flag%3D%27Y%27+AND+filed_date+%3E%3D+%272019-01-01T00%3A00%3A00%27+AND+filed_date+%3C+%272020-01-01T00%3A00%3A00%27&%24order=record_id&%24limit=100000",
+    "payload": null,
+    "retrieved_at_utc": "2026-10-22T20:12:16.960559+00:00",
+    "sha256": "510cfaee749d67102ab9c86b88e5664696b1e210cd133dfbc674d5dc59bd334c",
+    "bytes": 25084634
+  },
+  {
+    "extract_file": "permits_2020.csv",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.csv?%24select=permit_number%2Cpermit_type%2Cpermit_type_definition%2Cpermit_creation_date%2Cblock%2Clot%2Cstreet_number%2Cstreet_number_suffix%2Cstreet_name%2Cstreet_suffix%2Cunit%2Cunit_suffix%2Cdescription%2Cprimary_priority%2Call_priority_types%2Cstatus%2Cstatus_date%2Cfiled_date%2Cissued_date%2Ccompleted_date%2Cfirst_construction_document_date%2Capproved_date%2Cstructural_notification%2Cnumber_of_existing_stories%2Cnumber_of_proposed_stories%2Cvoluntary_soft_story_retrofit%2Cfire_only_permit%2Cestimated_cost%2Crevised_cost%2Cexisting_use%2Cexisting_units%2Cproposed_use%2Cproposed_units%2Cplansets%2Ctidf_compliance%2Cexisting_occupancy%2Cproposed_occupancy%2Cexisting_construction_type%2Cexisting_construction_type_description%2Cproposed_construction_type%2Cproposed_construction_type_description%2Csite_permit%2Clast_permit_activity_date%2Capplication_submission_method%2Cadu%2Cprimary_address_flag%2Csupervisor_district%2Cneighborhoods_analysis_boundaries%2Czipcode%2Clocation%2Cpoint_source%2Creroof%2Crecord_id%2Cdata_as_of%2Cdata_loaded_at&%24where=primary_address_flag%3D%27Y%27+AND+filed_date+%3E%3D+%272020-01-01T00%3A00%3A00%27+AND+filed_date+%3C+%272021-01-01T00%3A00%3A00%27&%24order=record_id&%24limit=100000",
+    "payload": null,
+    "retrieved_at_utc": "2026-10-22T20:12:19.477417+00:00",
+    "sha256": "14899cda8dc3782710c825f2140cb39a115c3f98238fe8c72910b7e85c867025",
+    "bytes": 15333034
+  },
+  {
+    "extract_file": "permits_2021.csv",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.csv?%24select=permit_number%2Cpermit_type%2Cpermit_type_definition%2Cpermit_creation_date%2Cblock%2Clot%2Cstreet_number%2Cstreet_number_suffix%2Cstreet_name%2Cstreet_suffix%2Cunit%2Cunit_suffix%2Cdescription%2Cprimary_priority%2Call_priority_types%2Cstatus%2Cstatus_date%2Cfiled_date%2Cissued_date%2Ccompleted_date%2Cfirst_construction_document_date%2Capproved_date%2Cstructural_notification%2Cnumber_of_existing_stories%2Cnumber_of_proposed_stories%2Cvoluntary_soft_story_retrofit%2Cfire_only_permit%2Cestimated_cost%2Crevised_cost%2Cexisting_use%2Cexisting_units%2Cproposed_use%2Cproposed_units%2Cplansets%2Ctidf_compliance%2Cexisting_occupancy%2Cproposed_occupancy%2Cexisting_construction_type%2Cexisting_construction_type_description%2Cproposed_construction_type%2Cproposed_construction_type_description%2Csite_permit%2Clast_permit_activity_date%2Capplication_submission_method%2Cadu%2Cprimary_address_flag%2Csupervisor_district%2Cneighborhoods_analysis_boundaries%2Czipcode%2Clocation%2Cpoint_source%2Creroof%2Crecord_id%2Cdata_as_of%2Cdata_loaded_at&%24where=primary_address_flag%3D%27Y%27+AND+filed_date+%3E%3D+%272021-01-01T00%3A00%3A00%27+AND+filed_date+%3C+%272022-01-01T00%3A00%3A00%27&%24order=record_id&%24limit=100000",
+    "payload": null,
+    "retrieved_at_utc": "2026-10-22T20:12:17.502225+00:00",
+    "sha256": "b23493e918721ef607ad15f61b4868afe798bbd6e37544c09a0db53d7147e917",
+    "bytes": 15881212
+  },
+  {
+    "extract_file": "permits_2022.csv",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.csv?%24select=permit_number%2Cpermit_type%2Cpermit_type_definition%2Cpermit_creation_date%2Cblock%2Clot%2Cstreet_number%2Cstreet_number_suffix%2Cstreet_name%2Cstreet_suffix%2Cunit%2Cunit_suffix%2Cdescription%2Cprimary_priority%2Call_priority_types%2Cstatus%2Cstatus_date%2Cfiled_date%2Cissued_date%2Ccompleted_date%2Cfirst_construction_document_date%2Capproved_date%2Cstructural_notification%2Cnumber_of_existing_stories%2Cnumber_of_proposed_stories%2Cvoluntary_soft_story_retrofit%2Cfire_only_permit%2Cestimated_cost%2Crevised_cost%2Cexisting_use%2Cexisting_units%2Cproposed_use%2Cproposed_units%2Cplansets%2Ctidf_compliance%2Cexisting_occupancy%2Cproposed_occupancy%2Cexisting_construction_type%2Cexisting_construction_type_description%2Cproposed_construction_type%2Cproposed_construction_type_description%2Csite_permit%2Clast_permit_activity_date%2Capplication_submission_method%2Cadu%2Cprimary_address_flag%2Csupervisor_district%2Cneighborhoods_analysis_boundaries%2Czipcode%2Clocation%2Cpoint_source%2Creroof%2Crecord_id%2Cdata_as_of%2Cdata_loaded_at&%24where=primary_address_flag%3D%27Y%27+AND+filed_date+%3E%3D+%272022-01-01T00%3A00%3A00%27+AND+filed_date+%3C+%272023-01-01T00%3A00%3A00%27&%24order=record_id&%24limit=100000",
+    "payload": null,
+    "retrieved_at_utc": "2026-10-22T20:12:36.480587+00:00",
+    "sha256": "4bb0cbe04b384590698eaf1fafb4baf3884c9d5e3582d3bf5bfdfe70d4277db3",
+    "bytes": 16427926
+  },
+  {
+    "extract_file": "permits_2023.csv",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.csv?%24select=permit_number%2Cpermit_type%2Cpermit_type_definition%2Cpermit_creation_date%2Cblock%2Clot%2Cstreet_number%2Cstreet_number_suffix%2Cstreet_name%2Cstreet_suffix%2Cunit%2Cunit_suffix%2Cdescription%2Cprimary_priority%2Call_priority_types%2Cstatus%2Cstatus_date%2Cfiled_date%2Cissued_date%2Ccompleted_date%2Cfirst_construction_document_date%2Capproved_date%2Cstructural_notification%2Cnumber_of_existing_stories%2Cnumber_of_proposed_stories%2Cvoluntary_soft_story_retrofit%2Cfire_only_permit%2Cestimated_cost%2Crevised_cost%2Cexisting_use%2Cexisting_units%2Cproposed_use%2Cproposed_units%2Cplansets%2Ctidf_compliance%2Cexisting_occupancy%2Cproposed_occupancy%2Cexisting_construction_type%2Cexisting_construction_type_description%2Cproposed_construction_type%2Cproposed_construction_type_description%2Csite_permit%2Clast_permit_activity_date%2Capplication_submission_method%2Cadu%2Cprimary_address_flag%2Csupervisor_district%2Cneighborhoods_analysis_boundaries%2Czipcode%2Clocation%2Cpoint_source%2Creroof%2Crecord_id%2Cdata_as_of%2Cdata_loaded_at&%24where=primary_address_flag%3D%27Y%27+AND+filed_date+%3E%3D+%272023-01-01T00%3A00%3A00%27+AND+filed_date+%3C+%272024-01-01T00%3A00%3A00%27&%24order=record_id&%24limit=100000",
+    "payload": null,
+    "retrieved_at_utc": "2026-10-22T20:12:40.689956+00:00",
+    "sha256": "730e104dfde09be020c3156e3a297dd7e2266af59b3bfbeaa48add1fc72e26e9",
+    "bytes": 16002051
+  },
+  {
+    "extract_file": "permits_2024.csv",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.csv?%24select=permit_number%2Cpermit_type%2Cpermit_type_definition%2Cpermit_creation_date%2Cblock%2Clot%2Cstreet_number%2Cstreet_number_suffix%2Cstreet_name%2Cstreet_suffix%2Cunit%2Cunit_suffix%2Cdescription%2Cprimary_priority%2Call_priority_types%2Cstatus%2Cstatus_date%2Cfiled_date%2Cissued_date%2Ccompleted_date%2Cfirst_construction_document_date%2Capproved_date%2Cstructural_notification%2Cnumber_of_existing_stories%2Cnumber_of_proposed_stories%2Cvoluntary_soft_story_retrofit%2Cfire_only_permit%2Cestimated_cost%2Crevised_cost%2Cexisting_use%2Cexisting_units%2Cproposed_use%2Cproposed_units%2Cplansets%2Ctidf_compliance%2Cexisting_occupancy%2Cproposed_occupancy%2Cexisting_construction_type%2Cexisting_construction_type_description%2Cproposed_construction_type%2Cproposed_construction_type_description%2Csite_permit%2Clast_permit_activity_date%2Capplication_submission_method%2Cadu%2Cprimary_address_flag%2Csupervisor_district%2Cneighborhoods_analysis_boundaries%2Czipcode%2Clocation%2Cpoint_source%2Creroof%2Crecord_id%2Cdata_as_of%2Cdata_loaded_at&%24where=primary_address_flag%3D%27Y%27+AND+filed_date+%3E%3D+%272024-01-01T00%3A00%3A00%27+AND+filed_date+%3C+%272025-01-01T00%3A00%3A00%27&%24order=record_id&%24limit=100000",
+    "payload": null,
+    "retrieved_at_utc": "2026-10-22T20:12:36.665137+00:00",
+    "sha256": "5b165ac29934b72376c18403e6e02d0b195d09db82726858fc43debe55397c18",
+    "bytes": 16136590
+  }
+]
